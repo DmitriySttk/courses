@@ -4,28 +4,24 @@ public class MainClass {
     //глобальные переменные(поля), которые видны из любой части класса
     //должны быть static, чтобы можно было использовать (если в том же классе, что и main)
 
-    //primitive variables, should be static;
-
-
-    byte globalByte;
-    short globalShort;
+    static byte globalByte;
+    static short globalShort;
     static char globalChar;
     static int globalInt = (int) (Math.random() * 500 - 250);
-    long globalLong;
+    static long globalLong;
     static float globalFloat;
-    double globalDouble;
-    boolean globalBoolean;
+    static double globalDouble;
+    static boolean globalBoolean;
 
-    //reference variables, should be static;
     static String globalReferenceString;
-    Byte globalReferenceByte;
-    Short globalReferenceShort;
-    Integer globalReferenceInt;
-    Long globalReferenceLong;
-    Character globalReferenceChar;
-    Float globalReferenceFloat;
-    Double globalReferenceDouble;
-    Boolean globalReferenceBoolean;
+    static Byte globalReferenceByte;
+    static Short globalReferenceShort;
+    static Integer globalReferenceInt;
+    static Long globalReferenceLong;
+    static Character globalReferenceChar;
+    static Float globalReferenceFloat;
+    static Double globalReferenceDouble;
+    static Boolean globalReferenceBoolean;
 
     static String globalStringResult;
 
