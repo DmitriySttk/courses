@@ -1,5 +1,7 @@
 package task2_colors;
 
+import java.util.Scanner;
+
 public class Rainbow {
     private final String[] COLOR_NAME = {"Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"};
     private int color;
@@ -16,7 +18,7 @@ public class Rainbow {
         this.color = color;
     }
 
-    //тут свич цветов, мб не выводить, а передавать элемент массива при вызове
+
     public String colorSelection(int input) {
         String color = "";
         setColor(input);
@@ -44,5 +46,35 @@ public class Rainbow {
                 break;
         }
         return color;
+    }
+
+    public void printColor() {
+        Scanner in = new Scanner(System.in);
+
+        int enteredNumber = in.nextInt();
+        if (enteredNumber >= 1 && enteredNumber <= 7) {
+            System.out.println("Your color is " + colorSelection(singleColor(enteredNumber)));
+        }
+        if (enteredNumber >= 11 && enteredNumber <= 77) {
+            mixedColor(enteredNumber);
+        }
+    }
+
+    public int singleColor(int s) {
+        return Integer.parseInt(String.valueOf(s));
+    }
+
+    public void mixedColor(int s) {
+
+        String enteredNumber = String.valueOf(s);
+        char firstNumber = enteredNumber.charAt(0);
+        char secondNumber = enteredNumber.charAt(1);
+        int outFirstColor = Integer.parseInt(String.valueOf(firstNumber));
+        int outSecondColor = Integer.parseInt(String.valueOf(secondNumber));
+        if (outFirstColor == outSecondColor)
+            System.out.println("Your color is " + colorSelection(outFirstColor));
+        else
+            System.out.println("Your color is " + colorSelection(outFirstColor) + "-" + colorSelection(outSecondColor));
+
     }
 }
