@@ -1,4 +1,4 @@
-package test_folder_for_git_mayhem;
+package test_folder_for_git_mess;
 
 public class Task3 {
     public static void main(String[] args) {
