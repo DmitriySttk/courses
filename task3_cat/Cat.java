@@ -40,6 +40,7 @@ public class Cat {
             System.out.println(counter + ". " + toString());
             counter++;
         }
+        System.out.println();
     }
 
     public void tenCatsWithFori() {
@@ -48,15 +49,17 @@ public class Cat {
             setCatAge((int) (Math.random() * 14 + 1));
             System.out.println(i + ".Cat Name: " + getCatName() + " age " + getCatAge());
         }
+        System.out.println();
     }
 
     public void tenCatsDoWhile() {
 
         int counter = 1;
         do {
-            System.out.println(counter + ". " + getCatName() + " " + getCatAge() + "\n");
+            System.out.println(counter + ". " + getCatName() + " " + getCatAge());
             counter++;
         } while (counter <= 10);
+        System.out.println();
     }
 
     public void fiveForEachCats() {
@@ -76,7 +79,7 @@ public class Cat {
             System.out.println(i);
         }
 
-
+        System.out.println();
     }
 
 

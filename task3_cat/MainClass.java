@@ -5,10 +5,9 @@ public class MainClass {
         Cat cat = new Cat();
         Cat doCat = new Cat(12, "Dawg");
 
-//       cat.tenCatsWithDefaultFields();
-//        cat.tenCatsWithFori();
-//        cat.tenCatsDoWhile();
-//        doCat.tenCatsDoWhile();
+        cat.tenCatsWithDefaultFields();
+        cat.tenCatsWithFori();
+        doCat.tenCatsDoWhile();
         cat.fiveForEachCats();
     }
 
