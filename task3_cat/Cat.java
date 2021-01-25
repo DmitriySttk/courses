@@ -56,7 +56,7 @@ public class Cat {
 
         int counter = 1;
         do {
-            System.out.println(counter + ". " + getCatName() + " " + getCatAge());
+            System.out.println(counter + ". Cat name: " + getCatName() + ", age " + getCatAge());
             counter++;
         } while (counter <= 10);
         System.out.println();
