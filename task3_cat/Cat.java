@@ -68,8 +68,8 @@ public class Cat {
         String[] result = new String[5];
         for (int i = 0; i < 5; i++) {
             setCatAge((int) (Math.random() * 14 + 1));
-            setCatName("Meowsew");
-            age[i] = String.valueOf(Integer.parseInt(String.valueOf(getCatAge())));
+            setCatName("Meowsew"+i);
+            age[i] = String.valueOf(getCatAge());
             name[i] = getCatName();
             result[i] = "Cat name: " + name[i] + " age " + age[i];
         }
