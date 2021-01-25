@@ -47,7 +47,6 @@ public class Cat {
             setCatName("Meowler" + i);
             setCatAge((int) (Math.random() * 14 + 1));
             System.out.println(i + ".Cat Name: " + getCatName() + " age " + getCatAge());
-
         }
     }
 
@@ -58,7 +57,6 @@ public class Cat {
             System.out.println(counter + ". " + getCatName() + " " + getCatAge() + "\n");
             counter++;
         } while (counter <= 10);
-
     }
 
     public void fiveForEachCats() {
@@ -68,7 +66,7 @@ public class Cat {
         String[] result = new String[5];
         for (int i = 0; i < 5; i++) {
             setCatAge((int) (Math.random() * 14 + 1));
-            setCatName("Meowsew"+i);
+            setCatName("Meowsew" + i);
             age[i] = String.valueOf(getCatAge());
             name[i] = getCatName();
             result[i] = "Cat name: " + name[i] + " age " + age[i];
