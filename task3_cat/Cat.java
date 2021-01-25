@@ -4,7 +4,9 @@ public class Cat {
     private int catAge = 5;
     private String catName = "mr.Meowster";
 
-    public void CatConstr(int catAge, String catName) {
+    public Cat(){}
+
+    public Cat(int catAge, String catName) {
         this.catAge = catAge;
         this.catName = catName;
     }
@@ -44,7 +46,7 @@ public class Cat {
     }
 
     public void tenCatsDoWhile() {
-        CatConstr(10, "Dawg");
+
         int counter = 1;
         do {
             System.out.println(counter+". "+getCatName()+" "+getCatAge()+"\n");
