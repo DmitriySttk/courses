@@ -1,8 +1,24 @@
 package task3_cat;
 
+import java.util.Objects;
+
 public class Cat {
     private int catAge = 5;
     private String catName = "mr.Meowster";
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cat cat = (Cat) o;
+        return catAge == cat.catAge &&
+                catName.equals(cat.catName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(catAge, catName);
+    }
 
     public Cat() {
     }
