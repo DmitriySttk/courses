@@ -36,6 +36,7 @@ public class Cat {
     public void tenCatsWithDefaultFields() {
 
         int counter = 1;
+        System.out.println("10 cats with default name and age fields (while+override):");
         while (counter <= 10) {
             System.out.println(counter + ". " + toString());
             counter++;
@@ -44,6 +45,7 @@ public class Cat {
     }
 
     public void tenCatsWithFori() {
+        System.out.println("10 cats with same name and random age fields (for cycle):");
         for (int i = 1; i <= 10; i++) {
             setCatName("Meowler" + i);
             setCatAge((int) (Math.random() * 14 + 1));
@@ -55,6 +57,7 @@ public class Cat {
     public void tenCatsDoWhile() {
 
         int counter = 1;
+        System.out.println("10 cats are initialized in the constructor (do-while):");
         do {
             System.out.println(counter + ". Cat name: " + getCatName() + ", age " + getCatAge());
             counter++;
@@ -74,7 +77,7 @@ public class Cat {
             name[i] = getCatName();
             result[i] = "Cat name: " + name[i] + " age " + age[i];
         }
-        //долбаный форич
+        System.out.println("foreach cats. go to hell:");
         for (String i : result) {
             System.out.println(i);
         }
