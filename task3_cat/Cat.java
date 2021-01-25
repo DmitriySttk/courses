@@ -4,7 +4,8 @@ public class Cat {
     private int catAge = 5;
     private String catName = "mr.Meowster";
 
-    public Cat(){}
+    public Cat() {
+    }
 
     public Cat(int catAge, String catName) {
         this.catAge = catAge;
@@ -27,20 +28,25 @@ public class Cat {
         this.catName = catName;
     }
 
+    @Override
+    public String toString() {
+        return "Cat Name: " + getCatName() + " Age " + getCatAge();
+    }
+
     public void tenCatsWithDefaultFields() {
 
         int counter = 1;
         while (counter <= 10) {
-            System.out.println(counter + ".Cat Name: " + getCatName() + "\n  Cat Age: " + getCatAge());
+            System.out.println(counter + ". " + toString());
             counter++;
         }
     }
 
     public void tenCatsWithFori() {
-        for (int i = 0; i < 10; i++) {
-            setCatName("Meowler" + Integer.toString(i));
-            setCatAge(1 + i);
-            System.out.println(i + ".Cat Name: " + getCatName() + "\n  Cat Age: " + getCatAge());
+        for (int i = 1; i <= 10; i++) {
+            setCatName("Meowler" + i);
+            setCatAge((int) (Math.random() * 14 + 1));
+            System.out.println(i + ".Cat Name: " + getCatName() + " age " + getCatAge());
 
         }
     }
@@ -49,14 +55,31 @@ public class Cat {
 
         int counter = 1;
         do {
-            System.out.println(counter+". "+getCatName()+" "+getCatAge()+"\n");
+            System.out.println(counter + ". " + getCatName() + " " + getCatAge() + "\n");
             counter++;
-        }   while (counter<=10);
+        } while (counter <= 10);
 
     }
 
-    @Override
-    public String toString() {
-        return "Cat Name: " + getCatName() + "\nCat  Age: " + getCatAge();
+    public void fiveForEachCats() {
+
+        String[] age = new String[5];
+        String[] name = new String[5];
+        String[] result = new String[5];
+        for (int i = 0; i < 5; i++) {
+            setCatAge((int) (Math.random() * 14 + 1));
+            setCatName("Meowsew");
+            age[i] = String.valueOf(Integer.parseInt(String.valueOf(getCatAge())));
+            name[i] = getCatName();
+            result[i] = "Cat name: " + name[i] + " age " + age[i];
+        }
+        //долбаный форич
+        for (String i : result) {
+            System.out.println(i);
+        }
+
+
     }
+
+
 }
