@@ -9,6 +9,7 @@ public class MainClass {
         cat.tenCatsWithFori();
         doCat.tenCatsDoWhile();
         cat.fiveForEachCats();
+
     }
 
 }
