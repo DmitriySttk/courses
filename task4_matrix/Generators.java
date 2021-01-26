@@ -22,7 +22,7 @@ public class Generators {
     }
 
     public Double doubleGenerator() {
-        double generatedDouble = Math.random()*(Double.MAX_VALUE-Double.MIN_VALUE)+Double.MIN_VALUE;
+        double generatedDouble = Math.random() * (Double.MAX_VALUE - Double.MIN_VALUE) + Double.MIN_VALUE;
         return generatedDouble;
     }
 }
