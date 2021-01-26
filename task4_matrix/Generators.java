@@ -25,4 +25,16 @@ public class Generators {
         double generatedDouble = Math.random() * (Double.MAX_VALUE - Double.MIN_VALUE) + Double.MIN_VALUE;
         return generatedDouble;
     }
+
+    public String convertDoubleToString() {
+
+        String result = "";
+        char temp = ' ';
+        String convert = String.valueOf(doubleGenerator());
+        for (int i = 0; i < 6; i++) {
+            temp = convert.charAt(i);
+            result = result + temp;
+        }
+        return result;
+    }
 }
