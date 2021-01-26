@@ -24,6 +24,9 @@ public class Main {
 
     public static void matrix(String convertedDouble, String randomStr){
         String matrix [][] = new String[10][10];
+        for (int i = 0; i < matrix.length; i++) {
+
+        }
 
     }
 
