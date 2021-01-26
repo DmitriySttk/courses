@@ -1,4 +1,4 @@
-package task3_cat;
+package task3_cats;
 
 public class MainClass {
     public static void main(String[] args) {

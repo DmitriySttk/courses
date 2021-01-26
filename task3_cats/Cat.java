@@ -1,4 +1,4 @@
-package task3_cat;
+package task3_cats;
 
 import java.util.Objects;
 
