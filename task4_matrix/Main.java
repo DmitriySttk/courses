@@ -5,27 +5,21 @@ public class Main {
         Generators str = new Generators();
         String a = str.stringGenerator();
         System.out.println(a);
-        System.out.println(convertDoubletoString());
+        String b = str.convertDoubleToString();
+        System.out.println(b);
 
 
     }
 
-    public static String convertDoubletoString() {
-        Generators in = new Generators();
-        String result = "";
-        char temp = ' ';
-        String convert = String.valueOf(in.doubleGenerator());
-        for (int i = 0; i < 6; i++) {
-            temp = convert.charAt(i);
-            result = result + temp;
-        }
-        return result;
-    }
 
-    public static void matrix(String convertedDouble, String randomStr){
+    public static void matrix(){
+        Generators gen = new Generators();
         String matrix [][] = new String[10][10];
         for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < i; j++) {
 
+
+            }
         }
 
     }
