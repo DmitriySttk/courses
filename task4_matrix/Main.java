@@ -8,10 +8,10 @@ public class Main {
 //        String b = str.convertDoubleToString();
 //        System.out.println(b);
 
-    matrix();
+        matrix();
     }
 
-
+//добавить класс матрица и перенести туда методы для заполнения и вывода+ методы для дейсвтий
     public static void matrix() {
         Generators gen = new Generators();
         String matrix[][] = new String[10][10];
@@ -23,13 +23,12 @@ public class Main {
                 } else {
                     matrix[i][j] = gen.stringGenerator();
                 }
-
             }
         }
         //вывод матрицы
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                System.out.print(matrix[i][j]+" ");
+                System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
