@@ -62,8 +62,8 @@ public class Matrix {
     public void comparisonOfArrays() {
         System.out.println();
         System.out.println("Comparison main and antidiagonal");
-        System.out.println("main diagonal equals antidiagonal: " + mainDiagonal.equals(antiDiagonal));
-        System.out.println("arrays: " + Arrays.equals(mainDiagonal, antiDiagonal));
+        System.out.println("main diagonal equals minor diagonal: " + mainDiagonal.equals(antiDiagonal));
+        System.out.println("values in arrays: " + Arrays.equals(mainDiagonal, antiDiagonal));
         System.out.println();
     }
 
