@@ -6,13 +6,14 @@ public class Main {
         Matrix mat = new Matrix();
 
 
-       mat.matrixFill();
-       mat.printMatrix();
-       mat.antiDiagFll();
+        mat.matrixFill();
+        mat.printMatrix();
+        mat.antiDiagFll();
         mat.mainDiagFll();
+        mat.mixArray();
         mat.comparisonOfArrays();
+        mat.numbersAndLetters();
     }
-
 
 
 }

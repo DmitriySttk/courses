@@ -6,18 +6,19 @@ public class Matrix {
     private String[][] matrix = new String[10][10];
     private String[] mainDiagonal = new String[10];
     private String[] antiDiagonal = new String[10];
+    private String[] mixedArray = new String[20];
+    private String[]arrayForRoundedDouble = new String[8];
+
 
     public String[] getMainDiagonal() {
         return mainDiagonal;
     }
 
-
     public String[] getAntiDiagonal() {
         return antiDiagonal;
     }
 
-
-//заполнение матрицы
+    //заполнение матрицы
     public void matrixFill() {
         Generators gen = new Generators();
         for (int i = 0; i < matrix.length; i++) {
@@ -30,7 +31,8 @@ public class Matrix {
             }
         }
     }
-//вывод матрицы
+
+    //вывод матрицы
     public void printMatrix() {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
@@ -39,27 +41,70 @@ public class Matrix {
             System.out.println();
         }
     }
-//заполнение массива элементами прямой  диагонали
+
+    //заполнение массива элементами прямой  диагонали
     public void mainDiagFll() {
         for (int i = 0; i < matrix.length; i++) {
-                mainDiagonal[i] = matrix[i][i];
-            }
-
+            mainDiagonal[i] = matrix[i][i];
+        }
     }
-//заполнение массива элементами побочной диагонали
+
+    //заполнение массива элементами побочной диагонали
     public void antiDiagFll() {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                antiDiagonal[i] = matrix[i][matrix.length-1-i]; //рот ебал, 2 часа, сука, на одну строку убить. не забыть удалить коммент
+                antiDiagonal[i] = matrix[i][matrix.length - 1 - i]; //рот ебал, 2 часа, сука, на одну строку убить. не забыть удалить коммент
             }
         }
-
-
     }
-    public void comparisonOfArrays(){
+
+    //сравнение объектов и элементов массивов
+    public void comparisonOfArrays() {
         System.out.println();
         System.out.println("Comparison main and antidiagonal");
-        System.out.println("main diagonal equals antidiagonal: "+mainDiagonal.equals(antiDiagonal));
-        System.out.println("arrays: "+ Arrays.equals(mainDiagonal, antiDiagonal));
+        System.out.println("main diagonal equals antidiagonal: " + mainDiagonal.equals(antiDiagonal));
+        System.out.println("arrays: " + Arrays.equals(mainDiagonal, antiDiagonal));
+    }
+
+    //заполнение смешанного массива элементами диагоналей
+    public void mixArray() {
+        for (int i = 0; i < 10; i++) {
+            mixedArray[i] = mainDiagonal[i];
+        }
+        for (int i = 0; i < 10; i++) {
+            mixedArray[i + 10] = antiDiagonal[i];
+        }
+
+    }
+
+    public void numbersAndLetters() {
+
+
+        char tempChar = ' ';
+        String tempString = "";
+        String doubleTOString;
+        double tempDouble = 0;
+        for (int i = 0; i < mixedArray.length; i++) {
+            tempString = mixedArray[i];
+            tempChar = tempString.charAt(0);
+            if (tempChar == '0' || tempChar == '1' || tempChar == '2' || tempChar == '3' || tempChar == '4' ||
+                    tempChar == '5' || tempChar == '6' || tempChar == '7' || tempChar == '8' || tempChar == '9') {
+
+                tempDouble = Double.parseDouble(tempString);
+                if (tempDouble > 1.7) {
+                    tempDouble = Math.ceil(tempDouble);
+                } else {
+                    tempDouble = Math.floor(tempDouble);
+                }
+                doubleTOString = String.valueOf(tempDouble);
+
+                for (int j = 0; j <arrayForRoundedDouble.length ; j++) {
+                    arrayForRoundedDouble[j]=doubleTOString;
+                }
+            }
+        }
+        for (int i = 0; i < arrayForRoundedDouble.length; i++) {
+            System.out.print(arrayForRoundedDouble[i]+"_");
+        }
     }
 }

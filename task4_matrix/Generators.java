@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Generators {
 
-//генератор литеральных строк
+    //генератор литеральных строк
     public String stringGenerator() {
 
         int leftLimit = 65; // letter 'A'
@@ -20,12 +20,14 @@ public class Generators {
 
         return generatedString;
     }
-//генератор дабла
+
+    //генератор дабла
     public Double doubleGenerator() {
         double generatedDouble = Math.random() * (Double.MAX_VALUE - Double.MIN_VALUE) + Double.MIN_VALUE;
         return generatedDouble;
     }
-//переводит дабл в строку и возвращает 6 первых символов
+
+    //переводит дабл в строку и возвращает 6 первых символов
     public String convertDoubleToString() {
 
         String result = "";
