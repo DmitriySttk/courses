@@ -3,11 +3,11 @@ package task4_matrix;
 import java.util.Arrays;
 
 public class Matrix {
-    private String[][] matrix = new String[10][10];
-    private String[] mainDiagonal = new String[10];
-    private String[] antiDiagonal = new String[10];
-    private String[] mixedArray = new String[20];
-    private String[]arrayForRoundedDouble = new String[8];
+    private final String[][] matrix = new String[10][10];
+    private final String[] mainDiagonal = new String[10];
+    private final String[] antiDiagonal = new String[10];
+    private final String[] mixedArray = new String[20];
+    private final String[] arrayForRoundedDouble = new String[8];
 
 
     public String[] getMainDiagonal() {
@@ -64,6 +64,7 @@ public class Matrix {
         System.out.println("Comparison main and antidiagonal");
         System.out.println("main diagonal equals antidiagonal: " + mainDiagonal.equals(antiDiagonal));
         System.out.println("arrays: " + Arrays.equals(mainDiagonal, antiDiagonal));
+        System.out.println();
     }
 
     //заполнение смешанного массива элементами диагоналей
@@ -79,12 +80,13 @@ public class Matrix {
 
     public void numbersAndLetters() {
 
-
         char tempChar = ' ';
         String tempString = "";
         String doubleTOString;
         double tempDouble = 0;
+        int tempCount = 0;
         for (int i = 0; i < mixedArray.length; i++) {
+
             tempString = mixedArray[i];
             tempChar = tempString.charAt(0);
             if (tempChar == '0' || tempChar == '1' || tempChar == '2' || tempChar == '3' || tempChar == '4' ||
@@ -98,13 +100,15 @@ public class Matrix {
                 }
                 doubleTOString = String.valueOf(tempDouble);
 
-                for (int j = 0; j <arrayForRoundedDouble.length ; j++) {
-                    arrayForRoundedDouble[j]=doubleTOString;
+                for (int j = 0; j < arrayForRoundedDouble.length; j++) {
+                    arrayForRoundedDouble[tempCount] = doubleTOString;
                 }
+                tempCount++;
             }
+
         }
         for (int i = 0; i < arrayForRoundedDouble.length; i++) {
-            System.out.print(arrayForRoundedDouble[i]+"_");
+            System.out.print(arrayForRoundedDouble[i] + "_");
         }
     }
 }
