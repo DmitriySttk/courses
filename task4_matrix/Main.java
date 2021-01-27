@@ -8,11 +8,9 @@ public class Main {
 
        mat.matrixFill();
        mat.printMatrix();
-
-
-       mat.sideDiagFll();
-        System.out.println();
-        mat.drctDiagFll();
+       mat.antiDiagFll();
+        mat.mainDiagFll();
+        mat.comparisonOfArrays();
     }
 
 
