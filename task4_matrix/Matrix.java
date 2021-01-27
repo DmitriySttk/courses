@@ -77,14 +77,16 @@ public class Matrix {
         }
 
     }
-
+    //самый стремный метод, мне за него стыдно
     public void numbersAndLetters() {
 
+        String result = "";
         char tempChar = ' ';
         String tempString = "";
         String doubleTOString;
         double tempDouble = 0;
         int tempCount = 0;
+
         for (int i = 0; i < mixedArray.length; i++) {
 
             tempString = mixedArray[i];
@@ -104,11 +106,21 @@ public class Matrix {
                     arrayForRoundedDouble[tempCount] = doubleTOString;
                 }
                 tempCount++;
+            } else {
+                result = tempString.substring(1, 4) + ",";
+                StringBuilder sb = new StringBuilder(result);
+                System.out.print(sb);
             }
 
         }
+        System.out.println();
         for (int i = 0; i < arrayForRoundedDouble.length; i++) {
-            System.out.print(arrayForRoundedDouble[i] + "_");
+            if (i < 7) {
+                System.out.print(arrayForRoundedDouble[i] + "_");
+            } else {
+                System.out.print(arrayForRoundedDouble[i]);
+            }
         }
+        System.out.println();
     }
 }
