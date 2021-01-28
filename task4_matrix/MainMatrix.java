@@ -1,6 +1,6 @@
 package task4_matrix;
 
-public class Main {
+public class MainMatrix {
     public static void main(String[] args) {
 
         Matrix mat = new Matrix();

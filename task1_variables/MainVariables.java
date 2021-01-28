@@ -1,6 +1,6 @@
 package task1_variables;
 
-public class MainClass {
+public class MainVariables {
     //глобальные переменные(поля), которые видны из любой части класса
     //должны быть static, чтобы можно было использовать (если в том же классе, что и main)
 
