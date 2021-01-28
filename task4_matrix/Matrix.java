@@ -52,9 +52,7 @@ public class Matrix {
     //заполнение массива элементами побочной диагонали
     public void antiDiagFll() {
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                antiDiagonal[i] = matrix[i][matrix.length - 1 - i]; //рот ебал, 2 часа, сука, на одну строку убить. не забыть удалить коммент
-            }
+            antiDiagonal[i] = matrix[i][matrix.length - 1 - i];
         }
     }
 
@@ -77,6 +75,7 @@ public class Matrix {
         }
 
     }
+
     //самый стремный метод, мне за него стыдно
     public void numbersAndLetters() {
 
@@ -108,7 +107,9 @@ public class Matrix {
                 tempCount++;
             } else {
                 result = tempString.substring(1, 4) + ",";
-                StringBuilder sb = new StringBuilder(result);
+                StringBuilder sb = new StringBuilder(result)
+                        .deleteCharAt(result.length() - 1);
+
                 System.out.print(sb);
             }
 
