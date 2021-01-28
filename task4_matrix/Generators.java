@@ -7,8 +7,8 @@ public class Generators {
     //генератор литеральных строк
     public String stringGenerator() {
 
-        int leftLimit = 65; // letter 'A'
-        int rightLimit = 122; // letter 'z'
+        int leftLimit = 65; //   'A'
+        int rightLimit = 122; // 'z'
         int targetStringLength = 6;
         Random random = new Random();
 

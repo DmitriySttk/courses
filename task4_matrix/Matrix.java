@@ -107,8 +107,8 @@ public class Matrix {
                 tempCount++;
             } else {
                 result = tempString.substring(1, 4) + ",";
-                StringBuilder sb = new StringBuilder(result)
-                        .deleteCharAt(result.length() - 1);
+                StringBuilder sb = new StringBuilder(result);
+
 
                 System.out.print(sb);
             }
