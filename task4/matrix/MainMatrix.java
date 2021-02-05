@@ -1,4 +1,4 @@
-package task4_matrix;
+package task4.matrix;
 
 public class MainMatrix {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package task4_matrix;
+package task4.matrix;
 
 import java.util.Arrays;
 
