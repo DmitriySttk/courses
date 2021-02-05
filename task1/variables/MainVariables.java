@@ -1,4 +1,4 @@
-package task1_variables;
+package task1.variables;
 
 public class MainVariables {
     //глобальные переменные(поля), которые видны из любой части класса

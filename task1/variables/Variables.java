@@ -1,4 +1,4 @@
-package task1_variables;
+package task1.variables;
 
 public class Variables {
     //то же самое что и MainClass, глобальные переменные, только модификатор доступа private
