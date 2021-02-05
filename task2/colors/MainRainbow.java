@@ -1,4 +1,4 @@
-package task2_colors;
+package task2.colors;
 
 public class MainRainbow {
 
