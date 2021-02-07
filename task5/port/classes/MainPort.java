@@ -5,5 +5,6 @@ public class MainPort {
         ShipsAreComing port = new ShipsAreComing();
 
         port.show(port.arrival());
+        port.showTotaWeight(port.arrival());
     }
 }
