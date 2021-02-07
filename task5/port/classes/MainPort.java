@@ -2,8 +2,8 @@ package task5.port.classes;
 
 public class MainPort {
     public static void main(String[] args) {
-        OneDeckWeight weight = new OneDeckWeight();
+        ShipsAreComing port = new ShipsAreComing();
         DiceRoll roll = new DiceRoll();
-        System.out.println("fist ship"+weight.waterInDeckWeight(1));
+        port.arrival();
     }
 }

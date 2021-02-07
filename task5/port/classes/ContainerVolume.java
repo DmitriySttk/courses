@@ -12,21 +12,25 @@ public class ContainerVolume implements ConeVolume, CuboidVolume, CylinderVolume
         double coneVolume = height / 3 * Math.PI * Math.pow((diagonal / 2), 2);
         return coneVolume;
     }
+
     //объём прямоугольного параллелепипеда
     public double cuboidVolume(double height, double diagonal) {
         double cuboidVolume = (Math.pow(diagonal, 2) / 2) * height;
         return cuboidVolume;
     }
+
     //объём цилиндра
     public double cylinderVolume(double height, double diagonal) {
         double cylinderVolume = Math.PI * Math.pow((diagonal / 2), 2) * height;
         return cylinderVolume;
     }
+
     //рандом 1-2
     public int rollOneToTwo() {
         int roll = (int) (Math.random() * 2 + 1);
         return roll;
     }
+
     //рандом 1-3
     public int rollOneToThree() {
         int roll = (int) (Math.random() * 3 + 1);

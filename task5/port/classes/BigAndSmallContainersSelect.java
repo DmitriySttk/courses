@@ -19,6 +19,7 @@ public class BigAndSmallContainersSelect extends ContainerWeight {
         }
         return selectedWeight;
     }
+
     //масса большого контейнера конкретной формы
     public double bigContainerWeightSelect(int rollOneToThree) {
         double selectedWeight = 0;
