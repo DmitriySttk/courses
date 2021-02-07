@@ -11,6 +11,5 @@ public class DiceRoll implements Dice {
     public int rollOneToThree() {
         int roll = (int) (Math.random() * 3 + 1);
         return roll;
-
     }
 }
