@@ -1,4 +1,4 @@
-package task5.port;
+package task5.port.classes;
 
 import task5.port.interfaces.ConeVolume;
 import task5.port.interfaces.CuboidVolume;
@@ -8,15 +8,17 @@ public class ContainerVolume implements ConeVolume, CuboidVolume, CylinderVolume
 
 
     public double coneVolume(double height, double diagonal) {
-        double coneVolume = height/3*Math.PI*Math.pow((diagonal/2),2);
+        double coneVolume = height / 3 * Math.PI * Math.pow((diagonal / 2), 2);
         return coneVolume;
     }
+
     public double cuboidVolume(double height, double diagonal) {
-        double cuboidVolume = (Math.pow(diagonal,2)/2)*height;
+        double cuboidVolume = (Math.pow(diagonal, 2) / 2) * height;
         return cuboidVolume;
     }
-    public double cylinderVolume(double height, double diagonal){
-        double cylinderVolume = Math.PI*Math.pow((diagonal/2),2)*height;
+
+    public double cylinderVolume(double height, double diagonal) {
+        double cylinderVolume = Math.PI * Math.pow((diagonal / 2), 2) * height;
         return cylinderVolume;
     }
 }
