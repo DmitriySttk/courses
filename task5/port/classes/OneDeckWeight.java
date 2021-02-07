@@ -4,7 +4,7 @@ public class OneDeckWeight extends BigAndSmallContainersSelect {
 
     public double waterInDeckWeight(){
         double resultWeight = 0;
-        int rollContainerSize = rollOneToTwo(); //containers size
+        int rollContainerSize = rollOneToTwo(); //containers size select
         if(rollContainerSize==1){
             for (int i = 0; i < 4; i++) {
                 resultWeight=resultWeight+smallContainerWeightSelect(rollOneToThree());
@@ -19,4 +19,5 @@ public class OneDeckWeight extends BigAndSmallContainersSelect {
         }
         return resultWeight;
     }
+
 }
