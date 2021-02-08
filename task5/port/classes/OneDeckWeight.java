@@ -1,7 +1,7 @@
 package task5.port.classes;
 
 public class OneDeckWeight extends BigAndSmallContainersSelect {
-
+    //определят какими контейнерами будет заполнена палуба большими или маленькими и заполняет одну палубу
     public double waterInDeckWeight() {
         double resultWeight = 0;
         int rollContainerSize = rollOneToTwo(); //containers size select

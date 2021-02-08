@@ -3,7 +3,8 @@ package task5.port.classes;
 public class BigAndSmallContainersSelect extends ContainerWeight {
 
 
-    //масса маленького контейнера конкретной формы
+    //масса маленького контейнера конкретной формы, принимает ролл 1-3, выдаёт массу
+    //заменить Math.random на метод (мб ебануть интерфейс ещё, но это не точно. на счет диагонали то же самое)
     public double smallContainerWeightSelect(int rollOneToThree) {
         double selectedWeight = 0;
         switch (rollOneToThree) {
