@@ -23,7 +23,7 @@ public class ShipsAreComing extends ShipWeight {
         System.out.println();
     }
 
-    public void showTotalWeight(double[] ships) {
+    public void showTotalWeight() {
         int totalResult = 0;
         double totalResultDouble = 0;
         for (int i = 0; i < ships.length; i++) {
