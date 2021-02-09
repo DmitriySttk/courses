@@ -1,7 +1,7 @@
 package task5.port.classes;
 
 public class BigAndSmallContainersSelect extends ContainerWeight {
-
+    //подумать как можно сократить дублирующийся по сути код
     //масса маленького контейнера конкретной формы, принимает ролл 1-3, выдаёт массу
     public double smallAndLightContainerWeightSelect(int rollOneToThree) {
         double selectedWeight = 0;
