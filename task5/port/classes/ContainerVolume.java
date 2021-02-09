@@ -36,4 +36,8 @@ public class ContainerVolume implements ConeVolume, CuboidVolume, CylinderVolume
         int roll = (int) (Math.random() * 3 + 1);
         return roll;
     }
+    public int rollTenToHundred() {
+        int roll = (int) (Math.random() * 90 + 10);
+        return roll;
+    }
 }

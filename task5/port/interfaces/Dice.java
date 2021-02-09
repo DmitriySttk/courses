@@ -4,4 +4,6 @@ public interface Dice {
     public int rollOneToTwo();
 
     public int rollOneToThree();
+
+    public int rollTenToHundred();
 }

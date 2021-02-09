@@ -9,13 +9,13 @@ public class BigAndSmallContainersSelect extends ContainerWeight {
         double selectedWeight = 0;
         switch (rollOneToThree) {
             case 1:
-                selectedWeight = smallContainerWeight(coneVolume(Math.random() * 90 + 10, 10));
+                selectedWeight = lightContainerWeight(coneVolume(rollTenToHundred(), 10));
                 break;
             case 2:
-                selectedWeight = smallContainerWeight(cuboidVolume(Math.random() * 90 + 10, 10));
+                selectedWeight = lightContainerWeight(cuboidVolume(rollTenToHundred(), 10));
                 break;
             case 3:
-                selectedWeight = smallContainerWeight(cylinderVolume(Math.random() * 90 + 10, 10));
+                selectedWeight = lightContainerWeight(cylinderVolume(rollTenToHundred(), 10));
 
         }
         return selectedWeight;
@@ -26,13 +26,13 @@ public class BigAndSmallContainersSelect extends ContainerWeight {
         double selectedWeight = 0;
         switch (rollOneToThree) {
             case 1:
-                selectedWeight = bigContainerWeight(coneVolume(Math.random() * 90 + 10, 20));
+                selectedWeight = heavyContainerWeight(coneVolume(rollTenToHundred(), 20));
                 break;
             case 2:
-                selectedWeight = bigContainerWeight(cuboidVolume(Math.random() * 90 + 10, 20));
+                selectedWeight = heavyContainerWeight(cuboidVolume(rollTenToHundred(), 20));
                 break;
             case 3:
-                selectedWeight = bigContainerWeight(cylinderVolume(Math.random() * 90 + 10, 20));
+                selectedWeight = heavyContainerWeight(cylinderVolume(rollTenToHundred(), 20));
 
         }
         return selectedWeight;

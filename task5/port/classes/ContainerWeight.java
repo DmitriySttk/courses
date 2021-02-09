@@ -14,14 +14,14 @@ public class ContainerWeight extends ContainerVolume {
         return HIGH_DENSITY;
     }
 
-    //масса маленького контейнера
-    public double smallContainerWeight(double shapeVolume) {
+    //масса лёгкого контейнера
+    public double lightContainerWeight(double shapeVolume) {
         double weight = getLOW_DENSITY() * shapeVolume;
         return weight;
     }
 
-    //масса большого контейнера
-    public double bigContainerWeight(double shapeVolume) {
+    //масса тяжелого контейнера
+    public double heavyContainerWeight(double shapeVolume) {
         double weight = getHIGH_DENSITY() * shapeVolume;
         return weight;
     }
