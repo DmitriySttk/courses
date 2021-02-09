@@ -7,7 +7,7 @@ public class OneDeckWeight extends BigAndSmallContainersSelect {
         int rollContainerSize = rollOneToTwo();     //containers size select
         if (rollContainerSize == 1) {               //заполнение палубы маленькими контейнерами
             for (int i = 0; i < 4; i++) {           //на палубе 4 контейнера
-                rollContainerSize = rollOneToTwo(); //выбор маленький-тяжелый/маленький/лёгкий
+                rollContainerSize = rollOneToTwo(); //выбор маленький-тяжелый/маленький-лёгкий
                 if (rollContainerSize == 1) {
                     resultWeight = resultWeight + smallAndLightContainerWeightSelect(rollOneToThree());
                 }
