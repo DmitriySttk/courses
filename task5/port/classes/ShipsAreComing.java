@@ -20,7 +20,7 @@ public class ShipsAreComing extends ShipWeight {
     //выводит значения элементов массива кораблей
     public void show(double[] ships) {
         for (int i = 0; i < ships.length; i++) {
-            System.out.println("ship №" + (i+1) + " contains " + ships[i]);
+            System.out.println("ship №" + (i + 1) + " contains " + ships[i]);
         }
         System.out.println();
     }

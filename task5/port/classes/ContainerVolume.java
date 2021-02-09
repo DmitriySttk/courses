@@ -1,11 +1,8 @@
 package task5.port.classes;
 
-import task5.port.interfaces.ConeVolume;
-import task5.port.interfaces.CuboidVolume;
-import task5.port.interfaces.CylinderVolume;
-import task5.port.interfaces.Dice;
+import task5.port.interfaces.*;
 
-public class ContainerVolume implements ConeVolume, CuboidVolume, CylinderVolume, Dice {
+public class ContainerVolume implements ConeVolume, CuboidVolume, CylinderVolume, Dice, Diagonal {
 
     //объём конуса
     public double coneVolume(double height, double diagonal) {
@@ -36,6 +33,8 @@ public class ContainerVolume implements ConeVolume, CuboidVolume, CylinderVolume
         int roll = (int) (Math.random() * 3 + 1);
         return roll;
     }
+
+    //высота 10-100
     public int rollTenToHundred() {
         int roll = (int) (Math.random() * 90 + 10);
         return roll;

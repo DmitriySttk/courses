@@ -6,6 +6,7 @@ public class ShipWeight extends OneDeckWeight {
         double resultWeight = waterInDeckWeight();
         return resultWeight;
     }
+
     //возвращает вес двух палуб заполненных по отдельности (полпятого утра, хочется в это верить)
     public double twoDecksShipWaterWeight() {
         double firstDeck = waterInDeckWeight();

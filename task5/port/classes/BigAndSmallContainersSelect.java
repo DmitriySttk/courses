@@ -2,36 +2,35 @@ package task5.port.classes;
 
 public class BigAndSmallContainersSelect extends ContainerWeight {
 
-
     //масса маленького контейнера конкретной формы, принимает ролл 1-3, выдаёт массу
-    //заменить Math.random на метод (мб ебануть интерфейс ещё, но это не точно. на счет диагонали то же самое)
     public double smallAndLightContainerWeightSelect(int rollOneToThree) {
         double selectedWeight = 0;
         switch (rollOneToThree) {
             case 1:
-                selectedWeight = lightContainerWeight(coneVolume(rollTenToHundred(), 10));
+                selectedWeight = lightContainerWeight(coneVolume(rollTenToHundred(), smallDiagonal));
                 break;
             case 2:
-                selectedWeight = lightContainerWeight(cuboidVolume(rollTenToHundred(), 10));
+                selectedWeight = lightContainerWeight(cuboidVolume(rollTenToHundred(), smallDiagonal));
                 break;
             case 3:
-                selectedWeight = lightContainerWeight(cylinderVolume(rollTenToHundred(), 10));
+                selectedWeight = lightContainerWeight(cylinderVolume(rollTenToHundred(), smallDiagonal));
 
         }
         return selectedWeight;
     }
+
     //масса тяжёлого маленького
     public double smallAndHeavyContainerWeightSelect(int rollOneToThree) {
         double selectedWeight = 0;
         switch (rollOneToThree) {
             case 1:
-                selectedWeight = heavyContainerWeight(coneVolume(rollTenToHundred(), 10));
+                selectedWeight = heavyContainerWeight(coneVolume(rollTenToHundred(), smallDiagonal));
                 break;
             case 2:
-                selectedWeight = heavyContainerWeight(cuboidVolume(rollTenToHundred(), 10));
+                selectedWeight = heavyContainerWeight(cuboidVolume(rollTenToHundred(), smallDiagonal));
                 break;
             case 3:
-                selectedWeight = heavyContainerWeight(cylinderVolume(rollTenToHundred(), 10));
+                selectedWeight = heavyContainerWeight(cylinderVolume(rollTenToHundred(), smallDiagonal));
 
         }
         return selectedWeight;
@@ -42,13 +41,13 @@ public class BigAndSmallContainersSelect extends ContainerWeight {
         double selectedWeight = 0;
         switch (rollOneToThree) {
             case 1:
-                selectedWeight = heavyContainerWeight(coneVolume(rollTenToHundred(), 20));
+                selectedWeight = heavyContainerWeight(coneVolume(rollTenToHundred(), bigDiagonal));
                 break;
             case 2:
-                selectedWeight = heavyContainerWeight(cuboidVolume(rollTenToHundred(), 20));
+                selectedWeight = heavyContainerWeight(cuboidVolume(rollTenToHundred(), bigDiagonal));
                 break;
             case 3:
-                selectedWeight = heavyContainerWeight(cylinderVolume(rollTenToHundred(), 20));
+                selectedWeight = heavyContainerWeight(cylinderVolume(rollTenToHundred(), bigDiagonal));
 
         }
         return selectedWeight;
@@ -59,13 +58,13 @@ public class BigAndSmallContainersSelect extends ContainerWeight {
         double selectedWeight = 0;
         switch (rollOneToThree) {
             case 1:
-                selectedWeight = lightContainerWeight(coneVolume(rollTenToHundred(), 20));
+                selectedWeight = lightContainerWeight(coneVolume(rollTenToHundred(), bigDiagonal));
                 break;
             case 2:
-                selectedWeight = lightContainerWeight(cuboidVolume(rollTenToHundred(), 20));
+                selectedWeight = lightContainerWeight(cuboidVolume(rollTenToHundred(), bigDiagonal));
                 break;
             case 3:
-                selectedWeight = lightContainerWeight(cylinderVolume(rollTenToHundred(), 20));
+                selectedWeight = lightContainerWeight(cylinderVolume(rollTenToHundred(), bigDiagonal));
 
         }
         return selectedWeight;
