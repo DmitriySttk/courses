@@ -1,32 +1,65 @@
 package task6.robots.classes;
 
 import task6.robots.enums.RobotBody;
+import task6.robots.enums.RobotHead;
 import task6.robots.interfaces.FinishedBody;
-import task6.robots.interfaces.FinishedHead;
 
-public class RobotsFactory extends Roll implements FinishedBody, FinishedHead {
+public class RobotsFactory extends Roll implements FinishedBody {
+    public Object robotBody = null;
+    public Object robotHead = null;
+
+    public Object getRobotBody() {
+        return robotBody;
+    }
+
+    public void setRobotBody(Object robotBody) {
+        this.robotBody = robotBody;
+    }
+
+    public Object getRobotHead() {
+        return robotHead;
+    }
+
+    public void setRobotHead(Object robotHead) {
+        this.robotHead = robotHead;
+    }
 
     @Override
-    public Object finishedBody(int roll) {
-        roll = rollOneToThree();
-        Object size = null;
+    public void finishedBody() {
+        int roll = rollOneToThree();
         switch (roll) {
             case 1:
-                size = RobotBody.BIG;
-                return size;
+                setRobotBody(RobotBody.BIG);
+                break;
             case 2:
-                size = RobotBody.MIDDLE;
-                return size;
+                setRobotBody(RobotBody.MIDDLE);
+                break;
             case 3:
-                size = RobotBody.SMALL;
-                return size;
+                setRobotBody(RobotBody.SMALL);
+                break;
         }
 
-        return size;
     }
 
-    @Override
-    public Object finishedHead(int roll) {
-        return null;
+    class HeadFactory implements task6.robots.interfaces.FinishedHead {
+
+        @Override
+        public void finishedHead() {
+            int roll = rollOneToThree();
+            switch (roll) {
+                case 1:
+                    setRobotHead(RobotHead.RED);
+                    break;
+                case 2:
+                    setRobotHead(RobotHead.GREEN);
+                    break;
+                case 3:
+                    setRobotHead(RobotHead.BLUE);
+                    break;
+            }
+
+        }
     }
+
+
 }
