@@ -1,5 +1,5 @@
 package task6.robots.interfaces;
 
 public interface FinishedHead {
-    public void finishedHead();
+    public Object finishedHead();
 }
