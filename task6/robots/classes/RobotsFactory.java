@@ -24,9 +24,11 @@ public class RobotsFactory extends Roll implements FinishedBody {
         }
         return body;
     }
-    public Object finishedHead(){
+
+    public Object finishedHead() {
         return head.finishedHead();
     }
+
     class HeadFactory implements task6.robots.interfaces.FinishedHead {
 
         @Override
@@ -35,13 +37,13 @@ public class RobotsFactory extends Roll implements FinishedBody {
             Object head = null;
             switch (roll) {
                 case 1:
-                    head=(RobotHead.RED);
+                    head = (RobotHead.RED);
                     break;
                 case 2:
-                    head=(RobotHead.GREEN);
+                    head = (RobotHead.GREEN);
                     break;
                 case 3:
-                    head=(RobotHead.BLUE);
+                    head = (RobotHead.BLUE);
                     break;
             }
             return head;
