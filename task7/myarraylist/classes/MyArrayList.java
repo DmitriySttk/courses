@@ -29,7 +29,7 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public int size() {
-        return 0;
+        return values.length;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return new ArrayIterator<E>(values);
+        return new ArrayIterator<>(values);
     }
 
 //    public MyArrayList() {
