@@ -1,15 +1,7 @@
 package task7.myarraylist.interfaces;
 
-public interface MyList<E> extends Iterable<E> {
-
-    boolean add(E e);
-
-    void delete(int index);
-
+public interface MyList<E> extends Iterable<E>{
+    void add(int index, E obj);
     E get(int index);
-
     int size();
-
-    void update(int index, E e);
-
 }

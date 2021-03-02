@@ -8,23 +8,25 @@ public class MyArrayList<E> implements MyList<E> {
 
     private E[] values;
 
-    public MyArrayList() {
-        values = (E[]) new Object();
+    MyArrayList(){
+        values =(E[]) new Object[0];
     }
 
-    @Override
-    public boolean add(E e) {
-        return false;
+    MyArrayList(int capacity){
+        values = (E[]) new Object[capacity];
     }
 
+
     @Override
-    public void delete(int index) {
+    public void add(int index, E obj) {
+        E[] temp = values;
+
 
     }
 
     @Override
     public E get(int index) {
-        return null;
+        return values[index];
     }
 
     @Override
@@ -33,28 +35,7 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
-    public void update(int index, E e) {
-
-    }
-
-    @Override
     public Iterator<E> iterator() {
-        return new ArrayIterator<>(values);
+        return new ArrayIterator<E>(values);
     }
-
-//    public MyArrayList() {
-//    }
-//
-//    MyArrayList(MyList<? extends E> col) {
-//
-//    }
-//
-//    MyArrayList(int capacity) {
-//
-//    }
-//
-//    @Override
-//    public boolean add(Object o) {
-//        return false;
-//    }
 }

@@ -2,7 +2,7 @@ package task7.myarraylist.classes;
 
 import java.util.Iterator;
 
-public class ArrayIterator<E> implements Iterator {
+public class ArrayIterator<E> implements Iterator<E> {
 
     private int index = 0;
     private E[] values;
@@ -13,11 +13,11 @@ public class ArrayIterator<E> implements Iterator {
 
     @Override
     public boolean hasNext() {
-        return false;
+        return index < values.length;
     }
 
     @Override
-    public Object next() {
-        return null;
+    public E next() {
+        return values[index++];
     }
 }
