@@ -75,7 +75,7 @@ public class MyArrayList<E> implements MyList<E> {
     public E remove(int index) {
         E temp = null;
         temp = values[index];
-        values[index]=null;
+        values[index] = null;
         return temp;
     }
 
