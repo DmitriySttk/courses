@@ -35,6 +35,12 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
+    public E set(int index, E obj) {
+         values[index]=obj;
+        return (E) values;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return new ArrayIterator<E>(values);
     }
