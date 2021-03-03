@@ -21,14 +21,14 @@ public class MyArrayList<E> implements MyList<E> {
     public void add(int index, E obj) {
         E[] temp = values;
         if(index>temp.length){
-            values =  (E[]) new Object[index];
-            for (int i = 0; i < temp.length; i++) {
+            values =  (E[]) new Object[index+1];
+            for (int i = 0; i < temp.length; i++) {  //копирование существующего массива в темп
                 values[i]=temp[i];
             }
-            values[index-1]=obj;
+            values[index]=obj;
         }
         else   {
-            values[index-1]=obj;
+            values[index]=obj;
         }
 
     }
