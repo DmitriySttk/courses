@@ -72,6 +72,14 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
+    public E remove(int index) {
+        E temp = null;
+        temp = values[index];
+        values[index]=null;
+        return temp;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return new ArrayIterator<E>(values);
     }

@@ -4,12 +4,11 @@ public class MyArrayListMain {
     public static void main(String[] args) {
         MyArrayList<String> array = new MyArrayList<>(5);
         int a;
+        String b;
 
         array.set(2, "two");
-        // System.out.println(array.get(2));
         array.add(10, "ten");
         System.out.println(array.size());
-//        System.out.println(array.get(9)+" "+array.get(2));
         array.add(4, "four");
         array.add(12, "seven");
         array.add(16, "sixteen");
@@ -21,8 +20,10 @@ public class MyArrayListMain {
         }
 
 //      a= array.indexOf("three");
-        a = array.lastIndexOf("seven");
-        System.out.println(a);
+//        a = array.lastIndexOf("seven");
+//        b=array.remove(2);
+//        System.out.println(b);
+//        System.out.println(array.get(2));
 
     }
 }
