@@ -11,9 +11,12 @@ public class MyArrayListMain {
 //        System.out.println(array.get(9)+" "+array.get(2));
         array.add(4, "four");
         array.add(7, "seven");
-        array.add(16,"sixteen");
+        array.add(16, "sixteen");
+        array.set(3, "three");
         for (String i : array) {
             System.out.println(i);
         }
+       int i= array.indexOf("three");
+        System.out.println(i);
     }
 }

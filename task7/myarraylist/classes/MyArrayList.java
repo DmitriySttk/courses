@@ -50,6 +50,18 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
+    public int indexOf(Object obj) {
+        int index;
+        for (int i = 0; i <values.length ; i++) {
+            if (obj.equals(values[i])){
+                index = i;
+                return index;
+            }
+        }
+        return -1;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return new ArrayIterator<E>(values);
     }
