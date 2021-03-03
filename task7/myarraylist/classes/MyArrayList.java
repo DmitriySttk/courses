@@ -1,5 +1,6 @@
 package task7.myarraylist.classes;
 
+
 import task7.myarraylist.interfaces.MyList;
 
 import java.util.Iterator;
@@ -82,16 +83,21 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public List<E> subList(int start, int end) {
-        E[] temp;
-        int counter = 0;
+        E[] temp = null;
+        int counter=0;
         for (int i = start; i < end; i++) {
-            temp[i] = values[i];
             counter++;
         }
+        List<E> result = (List<E>) new MyArrayList<E>(counter);
+        for (int i = start; i < end; i++) {
+            result.set(i, values[i]);
+        }
+
+        return result;
 
 
-        return ;
     }
+
 
     @Override
     public Iterator<E> iterator() {
