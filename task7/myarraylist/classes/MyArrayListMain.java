@@ -20,7 +20,7 @@ public class MyArrayListMain {
             System.out.println(i);
         }
 
-//      i= array.indexOf("three");
+//      a= array.indexOf("three");
         a = array.lastIndexOf("seven");
         System.out.println(a);
 
