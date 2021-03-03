@@ -40,7 +40,7 @@ public interface MyListAllMethods<E> extends Collection<E> {
     void sort(Comparator<? super E> comp);
     // сортирует список с помощью компаратора comp методом пузырька
 
-    List<E> subList(int start, int end);
+    List<E> subList(int start, int end);//получает набор элементов, которые находятся в списке между индексами start и end
 
 
 

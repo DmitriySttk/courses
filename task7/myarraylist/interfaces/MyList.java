@@ -1,5 +1,7 @@
 package task7.myarraylist.interfaces;
 
+import java.util.List;
+
 public interface MyList<E> extends Iterable<E> {
     void add(int index, E obj);
 
@@ -14,6 +16,8 @@ public interface MyList<E> extends Iterable<E> {
     int lastIndexOf(Object obj);// возвращает индекс последнего вхождения объекта obj в список. Если объект не найден, но возвращается -1
 
     E remove(int index);//удаляет, возвращает объект
+
+    List<E> subList(int start, int end);//получает набор элементов, которые находятся в списке между индексами start и end
 
 
 }

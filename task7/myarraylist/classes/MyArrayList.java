@@ -3,6 +3,7 @@ package task7.myarraylist.classes;
 import task7.myarraylist.interfaces.MyList;
 
 import java.util.Iterator;
+import java.util.List;
 
 public class MyArrayList<E> implements MyList<E> {
 
@@ -77,6 +78,19 @@ public class MyArrayList<E> implements MyList<E> {
         temp = values[index];
         values[index] = null;
         return temp;
+    }
+
+    @Override
+    public List<E> subList(int start, int end) {
+        E[] temp;
+        int counter = 0;
+        for (int i = start; i < end; i++) {
+            temp[i] = values[i];
+            counter++;
+        }
+
+
+        return ;
     }
 
     @Override
