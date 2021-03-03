@@ -8,11 +8,11 @@ public class MyArrayList<E> implements MyList<E> {
 
     private E[] values;
 
-    MyArrayList(){
-        values =(E[]) new Object[0];
+    MyArrayList() {
+        values = (E[]) new Object[0];
     }
 
-    MyArrayList(int capacity){
+    MyArrayList(int capacity) {
         values = (E[]) new Object[capacity];
     }
 
@@ -20,15 +20,14 @@ public class MyArrayList<E> implements MyList<E> {
     @Override
     public void add(int index, E obj) {
         E[] temp = values;
-        if(index>temp.length){
-            values =  (E[]) new Object[index+1];
+        if (index > temp.length) {
+            values = (E[]) new Object[index + 1];
             for (int i = 0; i < temp.length; i++) {  //копирование существующего массива в темп
-                values[i]=temp[i];
+                values[i] = temp[i];
             }
-            values[index]=obj;
-        }
-        else   {
-            values[index]=obj;
+            values[index] = obj;
+        } else {
+            values[index] = obj;
         }
 
     }
@@ -45,20 +44,31 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public E set(int index, E obj) {
-         values[index]=obj;
+        values[index] = obj;
         return (E) values;
     }
 
     @Override
     public int indexOf(Object obj) {
         int index;
-        for (int i = 0; i <values.length ; i++) {
-            if (obj.equals(values[i])){
+        for (int i = 0; i < values.length; i++) {
+            if (obj.equals(values[i])) {
                 index = i;
                 return index;
             }
         }
         return -1;
+    }
+
+    @Override
+    public int lastIndexOf(Object obj) {
+        int index = -1;
+        for (int i = 0; i < values.length; i++) {
+            if (obj.equals(values[i])) {
+                index = i;
+            }
+        }
+        return index;
     }
 
     @Override
