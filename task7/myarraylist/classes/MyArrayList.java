@@ -20,7 +20,16 @@ public class MyArrayList<E> implements MyList<E> {
     @Override
     public void add(int index, E obj) {
         E[] temp = values;
-
+        if(index>temp.length){
+            values =  (E[]) new Object[index];
+            for (int i = 0; i < temp.length; i++) {
+                values[i]=temp[i];
+            }
+            values[index-1]=obj;
+        }
+        else   {
+            values[index-1]=obj;
+        }
 
     }
 
