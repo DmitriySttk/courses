@@ -27,10 +27,8 @@ public class MyArrayList<E> implements MyList<E> {
             for (int i = 0; i < temp.length; i++) {  //копирование существующего массива в темп
                 values[i] = temp[i];
             }
-            values[index] = obj;
-        } else {
-            values[index] = obj;
         }
+        values[index] = obj;
 
     }
 
@@ -83,17 +81,18 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public List<E> subList(int start, int end) {
-        E[] temp = null;
-        int counter=0;
-        for (int i = start; i < end; i++) {
-            counter++;
-        }
-        List<E> result = (List<E>) new MyArrayList<E>(counter);
-        for (int i = start; i < end; i++) {
-            result.set(i, values[i]);
-        }
+//        E[] temp = null;
+//        int counter=0;
+//        for (int i = start; i < end; i++) {
+//            counter++;
+//        }
+//        List<E> result = (List<E>) new MyArrayList<E>(counter);
+//        for (int i = start; i < end; i++) {
+//            result.set(i, values[i]);
+//        }
 
-        return result;
+        E result = (E) values;
+        return (List<E>) result;
 
 
     }

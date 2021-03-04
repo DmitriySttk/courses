@@ -26,5 +26,8 @@ public class MyArrayListMain {
 //        System.out.println(b);
 //        System.out.println(array.get(2));
         MyArrayList<String> array2 = (MyArrayList<String>) array.subList(1,10);
+        for (String i : array2) {
+            System.out.println(i);
+        }
     }
 }
