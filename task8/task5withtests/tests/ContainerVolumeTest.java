@@ -39,7 +39,7 @@ public class ContainerVolumeTest {
     @RepeatedTest(10)
     void testForRandomOneToThree() {
         int i = volume.rollOneToThree();
-        if (i < 1 || i > 2) {
+        if (i < 1 || i > 3) {
             System.out.println("not noice");
         }
         else System.out.println("noiiice");
