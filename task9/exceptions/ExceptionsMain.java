@@ -5,15 +5,18 @@ public class ExceptionsMain {
         SimpleClass area = new SimpleClass();
         System.out.println(area.area(2, 3));
 
-        SimpleClass devide = new SimpleClass();
+        SimpleClass divide = new SimpleClass();
         try{
 
-            double result = devide.divideByNumber(12,2);
-            System.out.println(result);
+            double result = divide.divideByNumber(12,4);
+            System.out.println("result = "+result);
         }
         catch (SimpleClassException ex){
             System.out.println(ex.getMessage());
-            System.out.println(ex.getNumber());
+            System.out.println("divide by "+ex.getNumber());
+        }
+        finally {
+            System.out.println("you're awesome");
         }
 
     }
