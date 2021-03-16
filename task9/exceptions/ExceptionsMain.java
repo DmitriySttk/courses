@@ -11,7 +11,7 @@ public class ExceptionsMain {
             double result = divide.divideByNumber(12,4);
             System.out.println("result = "+result);
         }
-        catch (SimpleClassException ex){
+        catch (SimpleDivideException ex){
             System.out.println(ex.getMessage());
             System.out.println("divide by "+ex.getNumber());
         }

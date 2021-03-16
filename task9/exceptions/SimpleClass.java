@@ -9,10 +9,10 @@ public class SimpleClass {
         return width * height;
     }
 
-    public double divideByNumber(double firstNumber, double secondNumber) throws SimpleClassException {
+    public double divideByNumber(double firstNumber, double secondNumber) throws SimpleDivideException {
         double result;
-        if (secondNumber == 0) throw new SimpleClassException("you're genius! there's your noble prize!", secondNumber);
-        if (secondNumber % 2 != 0) throw new SimpleClassException("DIVIDE BY ODD NUMBER!!", secondNumber);
+        if (secondNumber == 0) throw new SimpleDivideException("you're genius! there's your noble prize!", secondNumber);
+        if (secondNumber % 2 != 0) throw new SimpleDivideException("DIVIDE BY ODD NUMBER!!", secondNumber);
 
         result = firstNumber / secondNumber;
         return result;
