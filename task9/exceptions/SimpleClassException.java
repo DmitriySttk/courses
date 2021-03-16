@@ -8,7 +8,6 @@ public class SimpleClassException extends Exception {
     }
 
     public SimpleClassException(String message, double num) {
-
         super(message);
         number = num;
     }

@@ -8,7 +8,7 @@ public class ExceptionsMain {
         SimpleClass devide = new SimpleClass();
         try{
 
-            double result = devide.divideByOddNumber(2,5);
+            double result = devide.divideByNumber(12,2);
             System.out.println(result);
         }
         catch (SimpleClassException ex){

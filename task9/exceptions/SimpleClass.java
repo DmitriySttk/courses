@@ -9,12 +9,12 @@ public class SimpleClass {
         return width * height;
     }
 
-    public double divideByOddNumber(double firstNumber, double secondNumber) throws SimpleClassException {
+    public double divideByNumber(double firstNumber, double secondNumber) throws SimpleClassException {
         double result;
-        if (secondNumber % 2 != 0) throw new SimpleClassException("DEVIDE BY ODD NUMBER!!", secondNumber);
+        if (secondNumber % 2 != 0) throw new SimpleClassException("DIVIDE BY ODD NUMBER!!", secondNumber);
+        if (secondNumber % 2 == 0) throw new SimpleClassException("just simple divide", secondNumber);
         result = firstNumber / secondNumber;
-
-
         return result;
     }
+
 }
