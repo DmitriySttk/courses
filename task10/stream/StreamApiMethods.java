@@ -46,19 +46,28 @@ public class StreamApiMethods {
         System.out.println("distinct " + distinct);
     }
 
-    public void streamMap() { //переделать нормально, хз чё не работает
-        List<Cpu> cars =
-                Arrays.asList(
-                        new Cpu("bla-bla", 97),
-                        new Cpu("bla", 99),
-                        new Cpu("blablalb", 10),
-                        new Cpu("tralala", 15),
-                        new Cpu("trololol", 97));
+    public void streamMap() {
+        List<Cpu> cpus = Arrays.asList(
+                new Cpu("bla-bla", 97),
+                new Cpu("bla", 99),
+                new Cpu("blablalb", 10),
+                new Cpu("tralala", 15),
+                new Cpu("trololol", 97));
 
-        cars.stream()
-                .map(Cpu::getFrequency) // преобразовываем Stream машин в Stream номеров
+        cpus.stream()
+                .map(Cpu::getFrequency)
                 .forEach(System.out::print);
 
+//        List<Cpu> broken = cpuList.stream()
+//                .map(Cpu::getFrequency)
+//                .forEach(System.out::print);
+
+    }
+
+    public void streamPeek() {
+        List<Cpu> peek = cpuList.stream()
+                .map(String::toUpperCase).peek((e) -> System.out.print("," + e)).
+                        collect(Collectors.toList());
     }
 
 }
