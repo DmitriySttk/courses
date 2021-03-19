@@ -46,12 +46,12 @@ public class StreamApiMethods {
             String name = cpu.getName();            //
             cpuNames.add(name);                     //
         }                                           //
-        System.out.println(cpuNames);               //
+        System.out.println("map: " + cpuNames);               //
 
         List<Double> cpuFreq = cpuList.stream()
                 .map(Cpu::getFrequency)
                 .collect(Collectors.toList());
-        System.out.println(cpuFreq);
+        System.out.println("map: " + cpuFreq);
     }
 
     public void cpuPeek() {
@@ -66,12 +66,12 @@ public class StreamApiMethods {
         List<Cpu> limit = cpuList.stream()
                 .limit(2)
                 .collect(Collectors.toList());
-        System.out.println(limit);
+        System.out.println("limit: " + limit);
     }
 
     public void cpuSorted() {
         List<Cpu> sorted = cpuList.stream()
-               // .filter(e -> e.getFrequency() < 2)
+                // .filter(e -> e.getFrequency() < 2)
                 .sorted(Comparator.comparingDouble(Cpu::getFrequency))
                 .collect(Collectors.toList());
         System.out.println("Compare: " + sorted);
