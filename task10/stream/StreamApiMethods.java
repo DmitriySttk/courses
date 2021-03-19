@@ -1,22 +1,15 @@
 package task10.stream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamApiMethods {
     Collection<Cpu> cpuList = Arrays.asList(
             new Cpu("Athlon", 1.5),
             new Cpu("Athlon", 1.5),
-            new Cpu("Athlon", 1.5),
-            new Cpu("Athlon", 1.5),
-            new Cpu("Athlon", 1.5),
             new Cpu("Celeron", 1.5),
             new Cpu("Sempron", 1.5),
             new Cpu("Athlon", 3.5),
-            new Cpu("Intel", 2),
             new Cpu("Atmega8", 0.001),
             new Cpu("STM32", 0.48),
             new Cpu("Ryzen", 3.5),
@@ -69,11 +62,28 @@ public class StreamApiMethods {
         System.out.println();
     }
 
-    public void streamLimit(){
+    public void streamLimit() {
         List<Cpu> limit = cpuList.stream()
                 .limit(2)
                 .collect(Collectors.toList());
         System.out.println(limit);
     }
+
+    public void streamSorted() {
+        List<Cpu> sorted = cpuList.stream()
+               // .filter(e -> e.getFrequency() < 2)
+                .sorted(Comparator.comparingDouble(Cpu::getFrequency))
+                .collect(Collectors.toList());
+        System.out.println("Compare: " + sorted);
+    }
+
+//    class CpuComparator implements Comparator<Cpu> {
+//
+//        @Override
+//        public int compare(Cpu a, Cpu b) {
+//
+//            return a.getName().toUpperCase().compareTo(b.getName().toUpperCase());
+//        }
+
 
 }

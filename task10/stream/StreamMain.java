@@ -9,6 +9,7 @@ public class StreamMain {
         test.streamMap();
         test.streamPeek();
         test.streamLimit();
+        test.streamSorted();
     }
 
 }
