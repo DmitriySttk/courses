@@ -5,6 +5,7 @@ public class StreamMain {
         StreamApiMethods test = new StreamApiMethods();
         test.streamFilter();
         test.streamSkip();
+        test.streamDistinct();
     }
 
 }
