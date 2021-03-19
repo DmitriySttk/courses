@@ -61,11 +61,12 @@ public class StreamApiMethods {
         System.out.println(cpuFreq);
     }
 
-//    public void streamPeek() {
-//
-//       List<String> peek =cpuList.stream()
-//                .map(String::toUpperCase).peek((e) -> System.out.print("," + e)).
-//                        collect(Collectors.toList());
-//    }
+    public void streamPeek() {
+
+        List<String> peek = cpuList.stream()
+                .map(Cpu::getName).peek((e) -> System.out.print("---" + e))
+                .collect(Collectors.toList());
+
+    }
 
 }
