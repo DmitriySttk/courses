@@ -1,5 +1,6 @@
 package task10.stream;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -47,27 +48,24 @@ public class StreamApiMethods {
     }
 
     public void streamMap() {
-        List<Cpu> cpus = Arrays.asList(
-                new Cpu("bla-bla", 97),
-                new Cpu("bla", 99),
-                new Cpu("blablalb", 10),
-                new Cpu("tralala", 15),
-                new Cpu("trololol", 97));
+        List<String> cpuNames = new ArrayList<>();  //для примера
+        for (Cpu cpu : cpuList) {                   //замена стрима на цикл
+            String name = cpu.getName();            //
+            cpuNames.add(name);                     //
+        }                                           //
+        System.out.println(cpuNames);               //
 
-        cpus.stream()
+        List<Double> cpuFreq = cpuList.stream()
                 .map(Cpu::getFrequency)
-                .forEach(System.out::print);
-
-//        List<Cpu> broken = cpuList.stream()
-//                .map(Cpu::getFrequency)
-//                .forEach(System.out::print);
-
+                .collect(Collectors.toList());
+        System.out.println(cpuFreq);
     }
 
-    public void streamPeek() {
-        List<Cpu> peek = cpuList.stream()
-                .map(String::toUpperCase).peek((e) -> System.out.print("," + e)).
-                        collect(Collectors.toList());
-    }
+//    public void streamPeek() {
+//
+//       List<String> peek =cpuList.stream()
+//                .map(String::toUpperCase).peek((e) -> System.out.print("," + e)).
+//                        collect(Collectors.toList());
+//    }
 
 }
