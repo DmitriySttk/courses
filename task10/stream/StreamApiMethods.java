@@ -49,7 +49,7 @@ public class StreamApiMethods {
 
     public void streamMap() {
         List<String> cpuNames = new ArrayList<>();  //для примера
-        for (Cpu cpu : cpuList) {                   //замена стрима на цикл
+        for (Cpu cpu : cpuList) {                   //замена стрима на foreach
             String name = cpu.getName();            //
             cpuNames.add(name);                     //
         }                                           //
@@ -66,7 +66,14 @@ public class StreamApiMethods {
         List<String> peek = cpuList.stream()
                 .map(Cpu::getName).peek((e) -> System.out.print("---" + e))
                 .collect(Collectors.toList());
+        System.out.println();
+    }
 
+    public void streamLimit(){
+        List<Cpu> limit = cpuList.stream()
+                .limit(2)
+                .collect(Collectors.toList());
+        System.out.println(limit);
     }
 
 }

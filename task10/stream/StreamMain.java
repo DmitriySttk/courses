@@ -8,6 +8,7 @@ public class StreamMain {
         test.streamDistinct();
         test.streamMap();
         test.streamPeek();
+        test.streamLimit();
     }
 
 }
