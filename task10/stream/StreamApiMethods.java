@@ -18,9 +18,13 @@ public class StreamApiMethods {
             new Cpu("Intel", 3),
             new Cpu("Athlon", 3));
 
-    public void streamTest(){
-
-        List<Cpu> test = CpuList.stream().filter((p)->p.getFrequency()>=2).collect(Collectors.toList());
-        System.out.println("2+ GHz: " +test );
+    public void streamFilter(){
+        List<Cpu> filter = CpuList.stream().filter((p)->p.getFrequency()>=2).collect(Collectors.toList());
+        System.out.println("2+ GHz: " +filter );
     }
+    public void streamSkip(){
+        List<Cpu> skip = CpuList.stream().skip(7).collect(Collectors.toList());
+        System.out.println(skip);
+    }
+
 }
