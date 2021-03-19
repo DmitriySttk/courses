@@ -46,7 +46,7 @@ public class StreamApiMethods {
             String name = cpu.getName();            //
             cpuNames.add(name);                     //
         }                                           //
-        System.out.println("map: " + cpuNames);               //
+        System.out.println("map: " + cpuNames);     //
 
         List<Double> cpuFreq = cpuList.stream()
                 .map(Cpu::getFrequency)
