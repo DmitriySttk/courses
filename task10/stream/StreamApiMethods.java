@@ -16,7 +16,7 @@ public class StreamApiMethods {
             new Cpu("Intel", 3),
             new Cpu("Athlon", 1.5));
 
-    public void streamFilter() {
+    public void cpuFilter() {
         List<Cpu> filter = cpuList.stream()
                 .filter((p) -> p.getFrequency() >= 2)
                 .collect(Collectors.toList());
@@ -24,7 +24,7 @@ public class StreamApiMethods {
         System.out.println("2+ GHz: " + filter);
     }
 
-    public void streamSkip() {
+    public void cpuSkip() {
         List<Cpu> skip = cpuList.stream()
                 .skip(7)
                 .collect(Collectors.toList());
@@ -32,7 +32,7 @@ public class StreamApiMethods {
         System.out.println("skip 7 " + skip);
     }
 
-    public void streamDistinct() {
+    public void cpuDistinct() {
         List<Cpu> distinct = cpuList.stream()
                 .distinct()
                 .collect(Collectors.toList());
@@ -40,7 +40,7 @@ public class StreamApiMethods {
         System.out.println("distinct " + distinct);
     }
 
-    public void streamMap() {
+    public void cpuMap() {
         List<String> cpuNames = new ArrayList<>();  //для примера
         for (Cpu cpu : cpuList) {                   //замена стрима на foreach
             String name = cpu.getName();            //
@@ -54,7 +54,7 @@ public class StreamApiMethods {
         System.out.println(cpuFreq);
     }
 
-    public void streamPeek() {
+    public void cpuPeek() {
 
         List<String> peek = cpuList.stream()
                 .map(Cpu::getName).peek((e) -> System.out.print("---" + e))
@@ -62,14 +62,14 @@ public class StreamApiMethods {
         System.out.println();
     }
 
-    public void streamLimit() {
+    public void cpuLimit() {
         List<Cpu> limit = cpuList.stream()
                 .limit(2)
                 .collect(Collectors.toList());
         System.out.println(limit);
     }
 
-    public void streamSorted() {
+    public void cpuSorted() {
         List<Cpu> sorted = cpuList.stream()
                // .filter(e -> e.getFrequency() < 2)
                 .sorted(Comparator.comparingDouble(Cpu::getFrequency))

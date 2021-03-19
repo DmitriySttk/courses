@@ -2,14 +2,14 @@ package task10.stream;
 
 public class StreamMain {
     public static void main(String[] args) {
-        StreamApiMethods test = new StreamApiMethods();
-        test.streamFilter();
-        test.streamSkip();
-        test.streamDistinct();
-        test.streamMap();
-        test.streamPeek();
-        test.streamLimit();
-        test.streamSorted();
+        StreamApiMethods cpuList = new StreamApiMethods();
+        cpuList.cpuFilter();
+        cpuList.cpuSkip();
+        cpuList.cpuDistinct();
+        cpuList.cpuMap();
+        cpuList.cpuPeek();
+        cpuList.cpuLimit();
+        cpuList.cpuSorted();
     }
 
 }
