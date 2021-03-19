@@ -6,6 +6,7 @@ public class StreamMain {
         test.streamFilter();
         test.streamSkip();
         test.streamDistinct();
+        test.streamMap();
     }
 
 }

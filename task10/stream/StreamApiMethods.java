@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StreamApiMethods {
-    Collection<Cpu> CpuList = Arrays.asList(
+    Collection<Cpu> cpuList = Arrays.asList(
             new Cpu("Athlon", 1.5),
             new Cpu("Athlon", 1.5),
             new Cpu("Athlon", 1.5),
@@ -23,25 +23,42 @@ public class StreamApiMethods {
             new Cpu("Athlon", 1.5));
 
     public void streamFilter() {
-        List<Cpu> filter = CpuList.stream()
+        List<Cpu> filter = cpuList.stream()
                 .filter((p) -> p.getFrequency() >= 2)
                 .collect(Collectors.toList());
+
         System.out.println("2+ GHz: " + filter);
     }
 
     public void streamSkip() {
-        List<Cpu> skip = CpuList.stream()
+        List<Cpu> skip = cpuList.stream()
                 .skip(7)
                 .collect(Collectors.toList());
-        System.out.println(skip);
+
+        System.out.println("skip 7 " + skip);
     }
 
     public void streamDistinct() {
-        List<Cpu> distinct = CpuList.stream()
+        List<Cpu> distinct = cpuList.stream()
                 .distinct()
                 .collect(Collectors.toList());
 
-        System.out.println(distinct);
+        System.out.println("distinct " + distinct);
+    }
+
+    public void streamMap() { //переделать нормально, хз чё не работает
+        List<Cpu> cars =
+                Arrays.asList(
+                        new Cpu("bla-bla", 97),
+                        new Cpu("bla", 99),
+                        new Cpu("blablalb", 10),
+                        new Cpu("tralala", 15),
+                        new Cpu("trololol", 97));
+
+        cars.stream()
+                .map(Cpu::getFrequency) // преобразовываем Stream машин в Stream номеров
+                .forEach(System.out::print);
+
     }
 
 }
