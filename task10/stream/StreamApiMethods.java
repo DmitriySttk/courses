@@ -57,7 +57,8 @@ public class StreamApiMethods {
     public void cpuPeek() {
 
         List<String> peek = cpuList.stream()
-                .map(Cpu::getName).peek((e) -> System.out.print("---" + e))
+                .map(Cpu::getName)
+                .peek((e) -> System.out.print("---" + e))
                 .collect(Collectors.toList());
         System.out.println();
     }
