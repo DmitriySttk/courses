@@ -80,24 +80,28 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
-    public MyArrayList<E> subList(int start, int end) {
-
-        int sublistArraySize = end - start;
-        Object tempValue;
-
-        E[] sublistArray = (E[]) new Object[sublistArraySize];
-
-        for (int i = 0; i < values.length; i++) {
-            if (i >= start && i <= end) {
-                tempValue = values[i];
-                for (int j = 0; j < sublistArray.length; j++) {
-                    sublistArray[j] = (E) tempValue;
-                }
-            }
-        }
-
-        return sublistArray;
+   public MyArrayList<E> subList(int start, int end) {
+        return null;
     }
+//    @Override
+//    public MyArrayList<E> subList(int start, int end) {
+//
+//        int sublistArraySize = end - start;
+//        Object tempValue;
+//
+//        E[] sublistArray = (E[]) new Object[sublistArraySize];
+//
+//        for (int i = 0; i < values.length; i++) {
+//            if (i >= start && i <= end) {
+//                tempValue = values[i];
+//                for (int j = 0; j < sublistArray.length; j++) {
+//                    sublistArray[j] = (E) tempValue;
+//                }
+//            }
+//        }
+//
+//        return sublistArray;
+//    }
 
 
     @Override
