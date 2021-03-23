@@ -4,6 +4,7 @@ package task7.myarraylist.classes;
 import task7.myarraylist.interfaces.MyList;
 
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class MyArrayList<E> implements MyList<E> {
 
@@ -79,29 +80,35 @@ public class MyArrayList<E> implements MyList<E> {
         return temp;
     }
 
-    @Override
-   public MyArrayList<E> subList(int start, int end) {
-        return null;
-    }
 //    @Override
 //    public MyArrayList<E> subList(int start, int end) {
-//
-//        int sublistArraySize = end - start;
-//        Object tempValue;
-//
-//        E[] sublistArray = (E[]) new Object[sublistArraySize];
-//
-//        for (int i = 0; i < values.length; i++) {
-//            if (i >= start && i <= end) {
-//                tempValue = values[i];
-//                for (int j = 0; j < sublistArray.length; j++) {
-//                    sublistArray[j] = (E) tempValue;
-//                }
-//            }
-//        }
-//
-//        return sublistArray;
+//        return null;
 //    }
+
+    @Override
+    public ListIterator<E> listIterator() {
+        return null;
+    }
+
+    @Override
+    public MyArrayList<E> subList(int start, int end) {
+
+        int sublistArraySize = end - start;
+        E tempValue;
+
+        E[] sublistArray = (E[]) new Object[sublistArraySize];
+
+        for (int i = 0; i < values.length; i++) {
+            if (i >= start && i <= end) {
+                tempValue = values[i];
+                for (int j = 0; j < sublistArray.length; j++) {
+                    sublistArray[j] = tempValue;
+                }
+            }
+        }
+
+        return sublistArray;
+    }
 
 
     @Override
