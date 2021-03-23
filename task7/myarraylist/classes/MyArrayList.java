@@ -81,22 +81,22 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public MyArrayList<E> subList(int start, int end) {
-        E[] temp = null;
-        int counter = end - start;
+
+        int sublistArraySize = end - start;
         Object tempValue;
 
-        E[] newArray = (E[]) new Object[counter];
+        E[] sublistArray = (E[]) new Object[sublistArraySize];
 
         for (int i = 0; i < values.length; i++) {
             if (i >= start && i <= end) {
                 tempValue = values[i];
-                for (int j = 0; j < newArray.length; j++) {
-                    newArray[j] = (E) tempValue;
+                for (int j = 0; j < sublistArray.length; j++) {
+                    sublistArray[j] = (E) tempValue;
                 }
             }
         }
 
-        return newArray;
+        return sublistArray;
     }
 
 
