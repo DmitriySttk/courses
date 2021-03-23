@@ -26,9 +26,11 @@ public class MyArrayListMain {
 //        b=array.remove(2);
 //        System.out.println(b);
 //        System.out.println(array.get(2));
-        MyArrayList<String> sublist = array.subList(2, 5);
-        for (Object t : sublist) {
-            System.out.println(t);
-        }
+
+        //sublist
+//        MyArrayList<String> sublist = array.subList(2, 5);
+//        for (String t : sublist) {
+//            System.out.println(t);
+//        }
     }
 }
