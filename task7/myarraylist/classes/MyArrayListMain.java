@@ -15,6 +15,7 @@ public class MyArrayListMain {
         array.add(16, "sixteen");
         array.set(3, "three");
         array.add(8, "seven");
+        array.add(5, "five");
 
 //        for (String i : array) {
 //            System.out.println(i);
@@ -25,6 +26,9 @@ public class MyArrayListMain {
 //        b=array.remove(2);
 //        System.out.println(b);
 //        System.out.println(array.get(2));
-        array.subList(2,4);
+        MyArrayList<String> sublist = array.subList(2, 5);
+        for (Object t : sublist) {
+            System.out.println(t);
+        }
     }
 }

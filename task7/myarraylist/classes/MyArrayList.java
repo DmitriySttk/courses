@@ -94,17 +94,12 @@ public class MyArrayList<E> implements MyList<E> {
     public MyArrayList<E> subList(int start, int end) {
 
         int sublistArraySize = end - start;
-        E tempValue;
 
-        E[] sublistArray = (E[]) new Object[sublistArraySize];
-
-        for (int i = 0; i < values.length; i++) {
-            if (i >= start && i <= end) {
-                tempValue = values[i];
-                for (int j = 0; j < sublistArray.length; j++) {
-                    sublistArray[j] = tempValue;
-                }
-            }
+        MyArrayList<E> sublistArray = new MyArrayList(sublistArraySize);
+        int count = 0;
+        for (int i = start; i < end; i++) {
+            sublistArray.add(count, values[i]);
+            count++;
         }
 
         return sublistArray;
