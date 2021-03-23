@@ -29,7 +29,7 @@ public class StreamApiMethods {
                 .skip(7)
                 .collect(Collectors.toList());
 
-        System.out.println("skip 7 " + skip);
+        System.out.println("skip 7: " + skip);
     }
 
     public void cpuDistinct() {
@@ -37,7 +37,7 @@ public class StreamApiMethods {
                 .distinct()
                 .collect(Collectors.toList());
 
-        System.out.println("distinct " + distinct);
+        System.out.println("distinct: " + distinct);
     }
 
     public void cpuMap() {
@@ -57,7 +57,8 @@ public class StreamApiMethods {
     public void cpuPeek() {
 
         List<String> peek = cpuList.stream()
-                .map(Cpu::getName).peek((e) -> System.out.print("---" + e))
+                .map(Cpu::getName)
+                .peek((e) -> System.out.print("---" + e))
                 .collect(Collectors.toList());
         System.out.println();
     }
