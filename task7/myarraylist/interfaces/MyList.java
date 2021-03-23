@@ -1,5 +1,7 @@
 package task7.myarraylist.interfaces;
 
+import task7.myarraylist.classes.MyArrayList;
+
 import java.util.List;
 
 public interface MyList<E> extends Iterable<E> {
@@ -17,7 +19,7 @@ public interface MyList<E> extends Iterable<E> {
 
     E remove(int index);//удаляет, возвращает объект
 
-    List<E> subList(int start, int end);//получает набор элементов, которые находятся в списке между индексами start и end
+    MyArrayList<E> subList(int start, int end);//получает набор элементов, которые находятся в списке между индексами start и end
 
 
 }

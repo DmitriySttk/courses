@@ -4,11 +4,11 @@ package task7.myarraylist.classes;
 import task7.myarraylist.interfaces.MyList;
 
 import java.util.Iterator;
-import java.util.List;
 
 public class MyArrayList<E> implements MyList<E> {
 
     private E[] values;
+
 
     MyArrayList() {
         values = (E[]) new Object[0];
@@ -80,21 +80,23 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
-    public List<E> subList(int start, int end) {
-//        E[] temp = null;
-//        int counter=0;
-//        for (int i = start; i < end; i++) {
-//            counter++;
-//        }
-//        List<E> result = (List<E>) new MyArrayList<E>(counter);
-//        for (int i = start; i < end; i++) {
-//            result.set(i, values[i]);
-//        }
+    public MyArrayList<E> subList(int start, int end) {
+        E[] temp = null;
+        int counter = end - start;
+        Object tempValue;
 
-        E result = (E) values;
-        return (List<E>) result;
+        E[] newArray = (E[]) new Object[counter];
 
+        for (int i = 0; i < values.length; i++) {
+            if (i >= start && i <= end) {
+                tempValue = values[i];
+                for (int j = 0; j < newArray.length; j++) {
+                    newArray[j] = (E) tempValue;
+                }
+            }
+        }
 
+        return newArray;
     }
 
 
