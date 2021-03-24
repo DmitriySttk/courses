@@ -3,6 +3,7 @@ package task7.myarraylist.classes;
 
 import task7.myarraylist.interfaces.MyList;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.ListIterator;
 
@@ -88,6 +89,13 @@ public class MyArrayList<E> implements MyList<E> {
     @Override
     public ListIterator<E> listIterator() {
         return null;
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends E> col) {
+
+
+        return false;
     }
 
     @Override

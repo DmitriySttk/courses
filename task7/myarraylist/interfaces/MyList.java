@@ -2,6 +2,7 @@ package task7.myarraylist.interfaces;
 
 import task7.myarraylist.classes.MyArrayList;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -23,5 +24,6 @@ public interface MyList<E> extends Iterable<E> {
     MyArrayList<E> subList(int start, int end);//получает набор элементов, которые находятся в списке между индексами start и end
 
     ListIterator<E> listIterator();
+    boolean addAll(int index, Collection<? extends E> col);
 }
 
