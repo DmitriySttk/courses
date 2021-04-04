@@ -13,6 +13,9 @@ public class Product {
         this.dateOfManufacture = dateOfManufacture;
     }
 
+    public Product() {
+    }
+
     public String getName() {
         return name;
     }
