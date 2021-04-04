@@ -19,6 +19,9 @@ public class MyArrayList<E> implements MyList<E> {
     MyArrayList(int capacity) {
         values = (E[]) new Object[capacity];
     }
+    MyArrayList(Collection<? extends E> col){
+
+    }
 
 
     @Override
@@ -81,10 +84,6 @@ public class MyArrayList<E> implements MyList<E> {
         return temp;
     }
 
-//    @Override
-//    public MyArrayList<E> subList(int start, int end) {
-//        return null;
-//    }
 
     @Override
     public ListIterator<E> listIterator() {
