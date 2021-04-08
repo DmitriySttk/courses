@@ -21,4 +21,12 @@ public class Order {
     public LocalDate getOrderDate() {
         return orderDate;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderId=" + orderId +
+                ", orderDate=" + orderDate +
+                '}';
+    }
 }

@@ -27,4 +27,13 @@ public class Product {
     public LocalDate getDateOfManufacture() {
         return dateOfManufacture;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", dateOfManufacture=" + dateOfManufacture +
+                '}';
+    }
 }
