@@ -2,6 +2,8 @@ package task11.iostreams;
 
 import task10.stream.Cpu;
 
+import java.time.LocalDate;
+
 public class MainInOutStreams {
     public static void main(String[] args) throws Exception {
         ProductCollection testCol = new ProductCollection();
@@ -9,5 +11,6 @@ public class MainInOutStreams {
             testCol.addProduct();
         }
         testCol.printCol();
+        System.out.println(LocalDate.now());
     }
 }

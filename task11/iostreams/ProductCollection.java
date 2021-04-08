@@ -9,14 +9,15 @@ import java.util.stream.Collectors;
 
 public class ProductCollection {
     ArrayList<Product> ProductList = new ArrayList<Product>();
-
+    Scanner in = new Scanner(System.in);
     public void addProduct() throws Exception {
-        Scanner in = new Scanner(System.in);
-        System.out.println("test");
+
+
         String name = in.next();
-        System.out.println("after");
-        ProductList.add(new Product(name,123,1));
-        System.out.println("after add");
+        int id = in.nextInt();
+
+        ProductList.add(new Product(name,id,LocalDate.now()));
+
 
     }
 
@@ -25,9 +26,9 @@ public class ProductCollection {
     }
 
     public void printCol(){
-        List<Product> print = ProductList.stream()
-                .collect(Collectors.toList());
+        List<Product> print = new ArrayList<>(ProductList);
         System.out.println(print);
+
     }
 }
 

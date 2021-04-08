@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class Product {
     private String name;
     private int id;
-    private int dateOfManufacture;
+    private LocalDate dateOfManufacture;
 
-    public Product(String name, int id, int dateOfManufacture) {
+    public Product(String name, int id, LocalDate dateOfManufacture) {
         this.name = name;
         this.id = id;
         this.dateOfManufacture = dateOfManufacture;
@@ -26,16 +26,18 @@ public class Product {
         return id;
     }
 
-    public int getDateOfManufacture() {
+    public LocalDate getDateOfManufacture() {
         return dateOfManufacture;
     }
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", dateOfManufacture=" + dateOfManufacture +
-                '}';
+        //        return "Product " +
+        //                "name: " + name +
+        //                ", id=" + id +
+        //                ", dateOfManufacture: " + dateOfManufacture +
+        //                '}'+'\n';
+            return "\n"+name+" "+id+" "+dateOfManufacture;
     }
+
 }
