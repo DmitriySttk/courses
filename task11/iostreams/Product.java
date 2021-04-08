@@ -1,17 +1,19 @@
 package task11.iostreams;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Product {
     private String name;
     private int id;
-    private LocalDate dateOfManufacture;
+    private int dateOfManufacture;
 
-    public Product(String name, int id, LocalDate dateOfManufacture) {
+    public Product(String name, int id, int dateOfManufacture) {
         this.name = name;
         this.id = id;
         this.dateOfManufacture = dateOfManufacture;
     }
+
 
     public Product() {
     }
@@ -24,7 +26,7 @@ public class Product {
         return id;
     }
 
-    public LocalDate getDateOfManufacture() {
+    public int getDateOfManufacture() {
         return dateOfManufacture;
     }
 
