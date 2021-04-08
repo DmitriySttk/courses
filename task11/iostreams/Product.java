@@ -1,14 +1,13 @@
 package task11.iostreams;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Product {
     private String name;
-    private int id;
+    private String id;
     private LocalDate dateOfManufacture;
 
-    public Product(String name, int id, LocalDate dateOfManufacture) {
+    public Product(String name, String id, LocalDate dateOfManufacture) {
         this.name = name;
         this.id = id;
         this.dateOfManufacture = dateOfManufacture;
@@ -22,7 +21,7 @@ public class Product {
         return name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -32,12 +31,8 @@ public class Product {
 
     @Override
     public String toString() {
-        //        return "Product " +
-        //                "name: " + name +
-        //                ", id=" + id +
-        //                ", dateOfManufacture: " + dateOfManufacture +
-        //                '}'+'\n';
-            return "\n"+name+" "+id+" "+dateOfManufacture;
+
+        return "\n" + name + " " + id + " " + dateOfManufacture;
     }
 
 }

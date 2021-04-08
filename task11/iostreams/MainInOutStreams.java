@@ -1,7 +1,5 @@
 package task11.iostreams;
 
-import task10.stream.Cpu;
-
 import java.time.LocalDate;
 
 public class MainInOutStreams {
@@ -11,6 +9,8 @@ public class MainInOutStreams {
             testCol.addProduct();
         }
         testCol.printCol();
-        System.out.println(LocalDate.now());
+
+        testCol.removeProduct();
+        testCol.printCol();
     }
 }
