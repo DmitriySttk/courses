@@ -3,10 +3,10 @@ package task11.iostreams;
 import java.time.LocalDate;
 
 public class Order {
-    private int orderId;
+    private String orderId;
     private LocalDate orderDate;
 
-    public Order(int orderId, LocalDate orderDate) {
+    public Order(String orderId, LocalDate orderDate) {
         this.orderId = orderId;
         this.orderDate = orderDate;
     }
@@ -14,7 +14,7 @@ public class Order {
     public Order() {
     }
 
-    public int getOrderId() {
+    public String getOrderId() {
         return orderId;
     }
 

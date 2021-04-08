@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductCollection {
-    ArrayList<Product> ProductList = new ArrayList<Product>();
+    ArrayList<Product> productList = new ArrayList<Product>();
     Scanner in = new Scanner(System.in);
 
     public void addProduct() throws Exception {
@@ -17,7 +17,7 @@ public class ProductCollection {
             System.out.println("Enter product ID");
             String id = in.next();
 
-            ProductList.add(new Product(name, id, LocalDate.now()));
+            productList.add(new Product(name, id, LocalDate.now()));
         } catch (Exception ex) {
             System.out.println("something went wrong");
         }
@@ -26,7 +26,7 @@ public class ProductCollection {
     public void removeProduct(){
         System.out.println("Enter product ID to remove");
         String id = in.next();
-        Iterator<Product> productIterator = ProductList.iterator();
+        Iterator<Product> productIterator = productList.iterator();
         while (productIterator.hasNext()){
             Product nextProd = productIterator.next();
             if(nextProd.getId().equalsIgnoreCase(id)){
@@ -36,7 +36,7 @@ public class ProductCollection {
     }
 
     public void printCol() {
-        List<Product> print = new ArrayList<>(ProductList);
+        List<Product> print = new ArrayList<>(productList);
         System.out.println(print);
     }
 }
