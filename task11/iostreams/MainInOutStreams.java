@@ -9,8 +9,8 @@ public class MainInOutStreams {
             testCol.addProduct();
         }
         testCol.printCol();
-
-        testCol.removeProduct();
-        testCol.printCol();
+        testCol.save();
+      //  testCol.removeProduct();
+      //  testCol.printCol();
     }
 }

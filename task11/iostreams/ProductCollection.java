@@ -1,8 +1,8 @@
 package task11.iostreams;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class ProductCollection {
         }
     }
 
-    public void removeProduct(){
+    public void removeProduct() {
         System.out.println("Enter product ID to remove");
         String id = in.next();
         productList.removeIf(nextProd -> nextProd.getId().equalsIgnoreCase(id));
@@ -38,6 +38,20 @@ public class ProductCollection {
     public void printCol() {
         List<Product> print = new ArrayList<>(productList);
         System.out.println(print);
+    }
+
+
+    public void save() throws FileNotFoundException {
+        try {
+            PrintWriter pw = new PrintWriter(new FileWriter("task11\\iostreams\\productList",true));
+            for (Product product : productList)
+                pw.println(product);
+            pw.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

@@ -32,7 +32,7 @@ public class Product {
     @Override
     public String toString() {
 
-        return "\n" + name + " " + id + " " + dateOfManufacture;
+        return name + "\\" + id + "\\" + dateOfManufacture;
     }
 
 }
