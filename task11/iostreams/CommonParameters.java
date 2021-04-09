@@ -2,19 +2,23 @@ package task11.iostreams;
 
 import java.time.LocalDate;
 
-public class Product {
+public class CommonParameters {
     private String name;
     private String id;
     private LocalDate dateOfManufacture;
 
-    public Product(String name, String id, LocalDate dateOfManufacture) {
+    public CommonParameters(String name, String id, LocalDate dateOfManufacture) {
         this.name = name;
         this.id = id;
         this.dateOfManufacture = dateOfManufacture;
     }
 
+    public CommonParameters(String id, LocalDate dateOfManufacture) {
+        this.id = id;
+        this.dateOfManufacture = dateOfManufacture;
+    }
 
-    public Product() {
+    public CommonParameters() {
     }
 
     public String getName() {

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductCollection {
-    ArrayList<Product> productList = new ArrayList<Product>();
+    ArrayList<CommonParameters> ProductList = new ArrayList<CommonParameters>();
     Scanner in = new Scanner(System.in);
 
     public void addProduct() throws Exception {
@@ -20,7 +20,7 @@ public class ProductCollection {
             System.out.println("Enter product ID");
             String id = in.next();
 
-            productList.add(new Product(name, id, LocalDate.now()));
+            ProductList.add(new CommonParameters(name, id, LocalDate.now()));
         } catch (Exception ex) {
             System.out.println("something went wrong");
         }
@@ -29,7 +29,7 @@ public class ProductCollection {
     public void removeProduct() {
         System.out.println("Enter product ID to remove");
         String id = in.next();
-        productList.removeIf(nextProd -> nextProd.getId().equalsIgnoreCase(id));
+        ProductList.removeIf(nextProd -> nextProd.getId().equalsIgnoreCase(id));
 //        Iterator<Product> productIterator = productList.iterator();       //это заменило стройкой выше
 //        while (productIterator.hasNext()){                                //уделить внимание, разобраться получше
 //            Product nextProd = productIterator.next();
@@ -39,7 +39,7 @@ public class ProductCollection {
     }
 
     public void printCol() {
-        List<Product> print = new ArrayList<>(productList);
+        List<CommonParameters> print = new ArrayList<>(ProductList);
         System.out.println(print);
     }
 
@@ -47,8 +47,8 @@ public class ProductCollection {
     public void save(String filepath) throws FileNotFoundException {
         try {
             PrintWriter pw = new PrintWriter(new FileWriter(filepath, true));
-            for (Product product : productList)
-                pw.println(product);
+            for (CommonParameters commonParameters : ProductList)
+                pw.println(commonParameters);
             pw.close();
         } catch (FileNotFoundException ex) {
             System.out.println(ex.getMessage());
