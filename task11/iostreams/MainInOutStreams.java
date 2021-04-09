@@ -9,7 +9,7 @@ public class MainInOutStreams {
             testCol.addProduct();
         }
         testCol.printCol();
-        testCol.save();
+        testCol.save("task11\\iostreams\\productList");
       //  testCol.removeProduct();
       //  testCol.printCol();
     }

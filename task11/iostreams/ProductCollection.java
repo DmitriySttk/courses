@@ -1,6 +1,9 @@
 package task11.iostreams;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,9 +44,9 @@ public class ProductCollection {
     }
 
 
-    public void save() throws FileNotFoundException {
+    public void save(String filepath) throws FileNotFoundException {
         try {
-            PrintWriter pw = new PrintWriter(new FileWriter("task11\\iostreams\\productList",true));
+            PrintWriter pw = new PrintWriter(new FileWriter(filepath, true));
             for (Product product : productList)
                 pw.println(product);
             pw.close();
@@ -51,6 +54,16 @@ public class ProductCollection {
             System.out.println(ex.getMessage());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void clearFile(String filepath) throws FileNotFoundException {
+        try {
+            PrintWriter writer = new PrintWriter(filepath);
+            writer.print("");
+            writer.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
         }
     }
 }
