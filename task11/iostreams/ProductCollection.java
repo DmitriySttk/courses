@@ -26,13 +26,13 @@ public class ProductCollection {
     public void removeProduct(){
         System.out.println("Enter product ID to remove");
         String id = in.next();
-        Iterator<Product> productIterator = productList.iterator();
-        while (productIterator.hasNext()){
-            Product nextProd = productIterator.next();
-            if(nextProd.getId().equalsIgnoreCase(id)){
-                productIterator.remove();
-            }
-        }
+        productList.removeIf(nextProd -> nextProd.getId().equalsIgnoreCase(id));
+//        Iterator<Product> productIterator = productList.iterator();       //это заменило стройкой выше
+//        while (productIterator.hasNext()){                                //уделить внимание, разобраться получше
+//            Product nextProd = productIterator.next();
+//            if(nextProd.getId().equalsIgnoreCase(id)){
+//                productIterator.remove();
+//            }
     }
 
     public void printCol() {
