@@ -36,7 +36,7 @@ public class CommonParameters {
     @Override
     public String toString() {
 
-        return name + "\\" + id + "\\" + dateOfManufacture;
+        return name + "/" + id + "/" + dateOfManufacture;
     }
 
 }

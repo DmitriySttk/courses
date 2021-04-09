@@ -1,5 +1,7 @@
 package task11.iostreams;
 
+import org.junit.jupiter.api.condition.EnabledIfSystemProperty;
+
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -66,19 +68,23 @@ public class ProductCollection {
     }
 
     public void createCollectionFromFile() throws IOException {
-        File myfile = new File("task11\\iostreams\\productList");
-        FileReader fr = new FileReader(myfile);
+        File myFile = new File("task11\\iostreams\\productList");
+        FileReader fr = new FileReader(myFile);
         BufferedReader reader = new BufferedReader(fr);
         String line;
+        String[] name;
         while ((line = reader.readLine()) != null) {
             tempArray.add(line);
+            name = line.split("/");
         }
         reader.close();
+
         //для тестового вывода
 //        for (String s :
 //                tempArray) {
 //            System.out.println(s);
 //        }
+
     }
 }
 
