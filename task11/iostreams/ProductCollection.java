@@ -44,7 +44,7 @@ public class ProductCollection {
     }
 
 
-    public void save(String filepath) throws FileNotFoundException {
+    public void save(String filepath) throws FileNotFoundException { //добавляет элементы коллекции в текстовый файл без перезаписи
         try {
             PrintWriter pw = new PrintWriter(new FileWriter(filepath, true));
             for (CommonParameters commonParameters : productList)
@@ -57,7 +57,7 @@ public class ProductCollection {
         }
     }
 
-    public void clearFile(String filepath) throws FileNotFoundException {
+    public void clearFile(String filepath) throws FileNotFoundException { //перезаписывает файл, очищая содержимое
         try {
             PrintWriter writer = new PrintWriter(filepath);
             writer.print("");
@@ -67,7 +67,7 @@ public class ProductCollection {
         }
     }
 
-    public void createCollectionFromFile() throws IOException {
+    public void createCollectionFromFile() throws IOException {  //создаёт String коллекцию из файла
         File myFile = new File("task11\\iostreams\\productList");
         FileReader fr = new FileReader(myFile);
         BufferedReader reader = new BufferedReader(fr);
