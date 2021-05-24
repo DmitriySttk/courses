@@ -8,6 +8,16 @@ public class Book {
     private double price;
     private boolean isInStock;
 
+    public Book(String name, String edition, double price, boolean isInStock) {
+        this.name = name;
+        this.edition = edition;
+        this.price = price;
+        this.isInStock = isInStock;
+    }
+
+    public Book() {
+    }
+
     public String getName() {
         return name;
     }
